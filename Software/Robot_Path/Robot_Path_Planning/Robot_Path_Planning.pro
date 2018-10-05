@@ -28,12 +28,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     robot.cpp \
-    map.cpp
+    map.cpp \
+    obstacles.cpp
 
 HEADERS += \
         mainwindow.h \
     robot.h \
-    map.h
+    map.h \
+    obstacles.h
 
 FORMS += \
         mainwindow.ui
