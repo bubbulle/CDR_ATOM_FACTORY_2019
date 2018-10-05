@@ -8,7 +8,7 @@
 class Obstacles : public Objet
 {
 public:
-  Obstacles();
+  Obstacles(Pose2D pose, Dimensions dim);
 
 private:
 

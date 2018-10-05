@@ -16,6 +16,9 @@ public:
     float theta() const;
     void setTheta(float theta);
 
+    Pose2D getPose2D() const;
+    void setPose2D(float x, float y, float theta);
+
 private:
     float x_;
     float y_;
