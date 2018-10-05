@@ -6,6 +6,10 @@
 
 class A_star : public Path_Finding
 {
+  typedef struct {
+
+  } Node;
+
 public:
   A_star(float start_pose, float target_pose);
 

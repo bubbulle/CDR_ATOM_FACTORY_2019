@@ -7,7 +7,7 @@
 class Obstacles
 {
 public:
-  Obstacles();
+  Obstacles(Pose2D pose, Dimensions dim);
 
   Pose2D pose() const;
   void setPose(const Pose2D &pose);
