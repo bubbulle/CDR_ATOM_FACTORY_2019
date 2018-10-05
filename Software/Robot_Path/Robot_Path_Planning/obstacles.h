@@ -5,7 +5,11 @@
 class Obstacles
 {
 public:
+<<<<<<< HEAD
   Obstacles();
+=======
+    Obstacles();
+>>>>>>> dev
 
 private:
 
