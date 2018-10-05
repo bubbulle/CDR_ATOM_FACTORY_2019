@@ -1,16 +1,9 @@
 #include "pose2d.h"
 
-<<<<<<< HEAD
 Pose2D::Pose2D(float x, float y, float theta):
     x_(x),
     y_(y),
     theta_(theta)
-=======
-Pose2D::Pose2D(float x, float y, float theta) :
-  x_(x),
-  y_(y),
-  theta_(theta)
->>>>>>> dev
 {
 }
 

@@ -1,16 +1,10 @@
 #include "dimensions.h"
 
-<<<<<<< HEAD
+
 Dimensions::Dimensions(float width, float length, float height):
     width_(width),
     length_(length),
     height_(height)
-=======
-Dimensions::Dimensions(float width, float length, float height) :
-  width_(width),
-  length_(length),
-  height_(height)
->>>>>>> dev
 {
 }
 
