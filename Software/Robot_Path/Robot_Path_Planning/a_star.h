@@ -7,7 +7,7 @@
 class A_star : public Path_Finding
 {
 public:
-  A_star();
+  A_star(float start_pose, float target_pose);
 
 private:
 

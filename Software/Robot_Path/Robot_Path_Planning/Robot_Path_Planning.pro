@@ -30,26 +30,22 @@ SOURCES += \
     robot.cpp \
     map.cpp \
     obstacles.cpp \
-<<<<<<< HEAD
+    a_star.cpp \
+    path_finding.cpp\
     path_finding.cpp \
-    a_star.cpp
-=======
+    a_star.cpp \
     pose2d.cpp \
     dimensions.cpp
->>>>>>> dev
 
 HEADERS += \
         mainwindow.h \
     robot.h \
     map.h \
     obstacles.h \
-<<<<<<< HEAD
     path_finding.h \
-    a_star.h
-=======
+    a_star.h \
     pose2d.h \
     dimensions.h
->>>>>>> dev
 
 FORMS += \
         mainwindow.ui
