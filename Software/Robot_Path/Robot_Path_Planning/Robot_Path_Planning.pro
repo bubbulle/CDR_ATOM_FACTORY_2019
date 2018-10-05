@@ -29,13 +29,17 @@ SOURCES += \
         mainwindow.cpp \
     robot.cpp \
     map.cpp \
-    obstacles.cpp
+    obstacles.cpp \
+    path_finding.cpp \
+    a_star.cpp
 
 HEADERS += \
         mainwindow.h \
     robot.h \
     map.h \
-    obstacles.h
+    obstacles.h \
+    path_finding.h \
+    a_star.h
 
 FORMS += \
         mainwindow.ui

@@ -6,6 +6,9 @@ class Obstacles
 {
 public:
   Obstacles();
+
+private:
+
 };
 
 #endif // OBSTACLES_H
