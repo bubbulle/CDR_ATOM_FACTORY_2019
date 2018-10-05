@@ -28,12 +28,18 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     robot.cpp \
-    map.cpp
+    map.cpp \
+    obstacles.cpp \
+    pose2d.cpp \
+    dimensions.cpp
 
 HEADERS += \
         mainwindow.h \
     robot.h \
-    map.h
+    map.h \
+    obstacles.h \
+    pose2d.h \
+    dimensions.h
 
 FORMS += \
         mainwindow.ui
