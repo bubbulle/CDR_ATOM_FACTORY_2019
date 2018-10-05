@@ -1,6 +1,6 @@
 #include "objet.h"
 
-Objet::Objet(Dimensions dimension,Pose2D pose):
+Objet::Objet(Pose2D pose, Dimensions dimension):
     dimension_(dimension),
     pose_(pose)
 {

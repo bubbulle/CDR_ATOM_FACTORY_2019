@@ -3,10 +3,10 @@
 
 #include "obstacles.h"
 
-class Montionless : public Obstacles
+class Motionless : public Obstacles
 {
 public:
-    Montionless();
+    Motionless();
 
 };
 

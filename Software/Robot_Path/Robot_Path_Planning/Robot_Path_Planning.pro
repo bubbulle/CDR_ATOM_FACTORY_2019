@@ -36,9 +36,9 @@ SOURCES += \
     a_star.cpp \
     pose2d.cpp \
     dimensions.cpp \
-    montionless.cpp \
     movable.cpp \
-    objet.cpp
+    objet.cpp \
+    motionless.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -49,9 +49,9 @@ HEADERS += \
     a_star.h \
     pose2d.h \
     dimensions.h \
-    montionless.h \
     movable.h \
-    objet.h
+    objet.h \
+    motionless.h
 
 FORMS += \
         mainwindow.ui

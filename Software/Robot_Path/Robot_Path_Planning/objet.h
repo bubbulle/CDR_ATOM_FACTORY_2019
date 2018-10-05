@@ -7,7 +7,7 @@
 class Objet
 {
 public:
-    Objet(Dimensions dimension,Pose2D pose);
+    Objet(Pose2D pose, Dimensions dimension);
 
     Dimensions dimension() const;
     void setDimension(const Dimensions &dimension);
