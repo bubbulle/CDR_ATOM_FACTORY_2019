@@ -9,8 +9,15 @@ class Obstacles
 public:
   Obstacles();
 
+  Pose2D pose() const;
+  void setPose(const Pose2D &pose);
+
+  Dimensions dimension() const;
+  void setDimension(const Dimensions &dimension);
+
 private:
-    Pose2D
+  Pose2D pose_;
+  Dimensions dimension_;
 
 };
 
