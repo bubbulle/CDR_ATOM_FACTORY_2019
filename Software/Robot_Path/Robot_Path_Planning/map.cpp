@@ -1,8 +1,10 @@
 #include "map.h"
 
-Map::Map(float width, float length):
+Map::Map(float width, float length, int width_resolution, int length_resolution):
   width_(width),
-  length_(length)
+  length_(length),
+  width_resolution_(width_resolution),
+  length_resolution_(length_resolution)
 {
 }
 
@@ -26,22 +28,22 @@ void Map::setList_obstacles(const list<Obstacles> &list_obstacles)
     list_obstacles_ = list_obstacles;
 }
 
-float Map::width_resolution() const
+int Map::width_resolution() const
 {
   return width_resolution_;
 }
 
-void Map::setWidth_resolution(float width_resolution)
+void Map::setWidth_resolution(int width_resolution)
 {
   width_resolution_ = width_resolution;
 }
 
-float Map::length_resolution() const
+int Map::length_resolution() const
 {
   return length_resolution_;
 }
 
-void Map::setLength_resolution(float length_resolution)
+void Map::setLength_resolution(int length_resolution)
 {
   length_resolution_ = length_resolution;
 }

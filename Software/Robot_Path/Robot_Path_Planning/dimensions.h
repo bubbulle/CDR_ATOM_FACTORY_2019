@@ -5,7 +5,7 @@
 class Dimensions
 {
 public:
-    Dimensions();
+    Dimensions(float width, float length, float height);
 
     float width() const;
     void setWidth(float width);

@@ -13,7 +13,7 @@ class Map
 
 
 public:
-  Map(float width, float length);
+  Map(float width, float length, int width_resolution, int length_resolution);
 
   list<Robot> list_robot() const;
   void setList_robot(const list<Robot> &list_robot);
@@ -21,17 +21,17 @@ public:
   list<Obstacles> list_obstacles() const;
   void setList_obstacles(const list<Obstacles> &list_obstacles);
 
-  float width_resolution() const;
-  void setWidth_resolution(float width_resolution);
+  int width_resolution() const;
+  void setWidth_resolution(int width_resolution);
 
-  float length_resolution() const;
-  void setLength_resolution(float length_resolution);
+  int length_resolution() const;
+  void setLength_resolution(int length_resolution);
 
 private:
   float width_;
   float length_;
-  float width_resolution_;
-  float length_resolution_;
+  int width_resolution_;
+  int length_resolution_;
 
   list<Obstacles> list_obstacles_;
 

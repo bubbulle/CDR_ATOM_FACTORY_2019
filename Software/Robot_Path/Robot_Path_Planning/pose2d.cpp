@@ -1,8 +1,10 @@
 #include "pose2d.h"
 
-Pose2D::Pose2D()
+Pose2D::Pose2D(float x, float y, float theta) :
+  x_(x),
+  y_(y),
+  theta_(theta)
 {
-
 }
 
 float Pose2D::x() const
@@ -33,5 +35,17 @@ float Pose2D::theta() const
 void Pose2D::setTheta(float theta)
 {
     theta_ = theta;
+}
+
+Pose2D Pose2D::getPose2D() const
+{
+  return *this;
+}
+
+void Pose2D::setPose2D(float x, float y, float theta)
+{
+  x_ = x;
+  y_ = y;
+  theta_ = theta;
 }
 
