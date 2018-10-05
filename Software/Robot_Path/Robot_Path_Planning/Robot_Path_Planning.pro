@@ -35,7 +35,10 @@ SOURCES += \
     path_finding.cpp \
     a_star.cpp \
     pose2d.cpp \
-    dimensions.cpp
+    dimensions.cpp \
+    montionless.cpp \
+    movable.cpp \
+    objet.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,7 +48,10 @@ HEADERS += \
     path_finding.h \
     a_star.h \
     pose2d.h \
-    dimensions.h
+    dimensions.h \
+    montionless.h \
+    movable.h \
+    objet.h
 
 FORMS += \
         mainwindow.ui

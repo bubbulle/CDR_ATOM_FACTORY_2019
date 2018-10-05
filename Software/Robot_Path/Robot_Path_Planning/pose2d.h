@@ -5,7 +5,7 @@
 class Pose2D
 {
 public:
-    Pose2D();
+    Pose2D(float x, float y, float theta);
 
     float x() const;
     void setX(float x);
