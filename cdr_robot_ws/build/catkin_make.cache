@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install -G Unix Makefiles
