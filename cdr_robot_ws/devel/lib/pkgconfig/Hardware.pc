@@ -1,0 +1,8 @@
+prefix=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel
+
+Name: Hardware
+Description: Description of Hardware
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib 
+Requires: 
