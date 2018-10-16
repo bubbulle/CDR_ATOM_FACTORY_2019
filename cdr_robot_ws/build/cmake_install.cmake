@@ -118,6 +118,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/cmake_install.cmake")
   include("/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/cmake_install.cmake")
+  include("/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/cmake_install.cmake")
   include("/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software/cmake_install.cmake")
 
 endif()
