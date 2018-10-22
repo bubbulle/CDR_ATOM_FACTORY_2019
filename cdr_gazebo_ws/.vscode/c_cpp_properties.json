@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/slyte/catkin_ws/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/slyte/Documents/Git/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_gazebo_ws/src/robot_cdr_description/include",
+                "/home/slyte/Documents/Git/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_gazebo_ws/src/table_cdr_gazebo/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
