@@ -63,6 +63,6 @@
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
-
+    <gazebo_ros gazebo_model_path="${/home/slyte/Documents/Git/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_gazebo_ws/src/table_cdr_gazebo}/src/models" />
   </export>
 </package>
