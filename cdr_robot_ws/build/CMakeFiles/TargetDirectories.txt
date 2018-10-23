@@ -36,13 +36,6 @@
 /home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/CMakeFiles/install/local.dir
 /home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/CMakeFiles/install/strip.dir
 /home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/CMakeFiles/test.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/list_install_components.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/install.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/rebuild_cache.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/install/strip.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/install/local.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/test.dir
-/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/testtest/CMakeFiles/edit_cache.dir
 /home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software/CMakeFiles/list_install_components.dir
 /home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software/CMakeFiles/install.dir
 /home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software/CMakeFiles/rebuild_cache.dir

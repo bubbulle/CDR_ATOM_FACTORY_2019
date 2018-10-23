@@ -437,24 +437,6 @@ clean: hardware/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory testtest
-
-# Convenience name for "all" pass in the directory.
-testtest/all:
-
-.PHONY : testtest/all
-
-# Convenience name for "clean" pass in the directory.
-testtest/clean:
-
-.PHONY : testtest/clean
-
-# Convenience name for "preinstall" pass in the directory.
-testtest/preinstall:
-
-.PHONY : testtest/preinstall
-
-#=============================================================================
 # Directory level rules for directory software
 
 # Convenience name for "all" pass in the directory.

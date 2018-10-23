@@ -1,7 +1,11 @@
-#! usr/bin/env python
+#!/usr/bin/env python
 
 import numpy
 import rospy
+
+from std_msgs.msg import Empty
+
+from geometry_msgs.msg import Pose2D
 
 #Pseudo_code for A_star algo
 
