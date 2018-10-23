@@ -6,7 +6,7 @@
             <collision name="collision">
                 <geometry>
                     <mesh>
-                        <uri>model://accelerateur/meshes/A1.stl</uri>
+                        <uri>model://accelerateur/meshes/A1.STL</uri>
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
@@ -22,7 +22,7 @@
             <visual name="visual">
                 <geometry>
                     <mesh>
-                        <uri>model://accelerateur/meshes/A1.stl</uri>
+                        <uri>model://accelerateur/meshes/A1.STL</uri>
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
