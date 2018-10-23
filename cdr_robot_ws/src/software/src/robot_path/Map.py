@@ -29,5 +29,3 @@ class Map:
     def Add_Obstacle(self, obstacle):
         if(Pose_Available(self,obstacle) == True):
         self.matrix_[obstacle.pose2D] = 1 #Obstacle i son the map and set to 1
-
-    

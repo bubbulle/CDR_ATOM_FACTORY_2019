@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 
 import numpy
-import rospy
-
-from std_msgs.msg import Empty
-
-from geometry_msgs.msg import Pose2D
 
 #Pseudo_code for A_star algo
 
@@ -53,6 +48,9 @@ class Node:
     def __init__(self, x=0, y=0):
         self.x_ = x
         self.y_ = y
+
+        self.parent = None
+
         self.cost_ = None
         self.cost_.heuristic_ = 0
         self.cost_.g_ = 0
@@ -62,7 +60,7 @@ class Node:
         print("x")
 
 class A_Star:
-    def __init__(self, map=None, start_node=None, target_node=None):
+    def __init__(self, map=None, start_node=Node(), target_node=Node()):
         self.closed_list = set()
         self.opened_list = set()
 
@@ -84,4 +82,15 @@ class A_Star:
             current = min(self.opened_list, lambda node : node.cost_.g_ + node.cost_.heuristic_)
 
             if current == self.target_node_:
-                print("ok")
+                while current.parent:
+                    self.final_path_.append(current)
+                    current = current.parent
+                
+                self.final_path_.append(current)
+                return self.final_path_[::-1]
+
+            self.opened_list.remove(current)
+            self.closed_list.add(current)
+
+            for node in self.opened_list:
+                
