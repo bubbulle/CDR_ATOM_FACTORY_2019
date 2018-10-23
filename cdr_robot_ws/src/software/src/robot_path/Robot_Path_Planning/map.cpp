@@ -6,6 +6,7 @@ Map::Map(float width, float length, int width_resolution, int length_resolution)
   width_resolution_(width_resolution),
   length_resolution_(length_resolution)
 {
+
 }
 
 list<Robot> Map::list_robot() const
