@@ -1,6 +1,7 @@
 #! usr/bin/env python
 
 import numpy
+import rospy
 
 #Pseudo_code for A_star algo
 
@@ -79,3 +80,4 @@ class A_Star:
             current = min(self.opened_list, lambda node : node.cost_.g_ + node.cost_.heuristic_)
 
             if current == self.target_node_:
+                print("ok")

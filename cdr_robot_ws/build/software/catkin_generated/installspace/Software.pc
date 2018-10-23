@@ -1,8 +1,0 @@
-prefix=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install
-
-Name: Software
-Description: Description of Software
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/lib 
-Requires: 

@@ -214,12 +214,6 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
-//Value Computed by CMake
-Hardware_BINARY_DIR:STATIC=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware
-
-//Value Computed by CMake
-Hardware_SOURCE_DIR:STATIC=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/hardware
-
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -246,12 +240,6 @@ RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
-
-//Value Computed by CMake
-Software_BINARY_DIR:STATIC=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software
-
-//Value Computed by CMake
-Software_SOURCE_DIR:STATIC=/home/florian/Documents/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/software
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
