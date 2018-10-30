@@ -33,7 +33,27 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hardware/cmake" TYPE FILE FILES "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/catkin_generated/installspace/hardware-msg-paths.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/share/roseus/ros/hardware")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib/python2.7/dist-packages/hardware")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib/python2.7/dist-packages/hardware")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/catkin_generated/installspace/hardware.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hardware/cmake" TYPE FILE FILES "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware/catkin_generated/installspace/hardware-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
