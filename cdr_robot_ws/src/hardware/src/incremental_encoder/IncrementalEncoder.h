@@ -8,7 +8,7 @@
  * Branchement codeur sans push-pull :
  *    - BROWN : 5V
  *    - WHITE : GND
- *    - GRAY : SIGNAL B en PIN 7 pour gauche, PIN 8 pour droit
+ *    - GRAY :  SIGNAL B en PIN 7 pour gauche, PIN 8 pour droit
  *    - GREEN : SIGNAL A en PIN 2 pour gauche, PIN 3 pour droit
  *    
  * 
@@ -20,24 +20,25 @@
 
 typedef struct //Encodeur simple sans push-pull
 {
-    uint32_t pinSignalA;
-    uint32_t pinSignalB;
+  uint32_t pinSignalA;
+  uint32_t pinSignalB;
 
-    volatile uint32_t pos; // Position (en nombre de pas) du codeur
+  volatile uint32_t pos; // Position (en nombre de pas) du codeur
 } EncoderSimple;
 
-class IncremantalEncoder
+class IncrementalEncoder
 {
-  public:
-    IncremantalEncoder(int pinADroit, int pinBGauche);
+public:
+  IncrementalEncoder(int pinAGauche, int pinBGauche);
 
-  private:
-    void init();
-    void increment();
-    void decrement();
-    uint8_t pinADroit;
-    uint8_t pinBGauche;
+private:
+  void init();
+  void increment();
+  void decrement();
+  
+  uint8_t pinA;
+  uint8_t pinB;
 
-    EncoderSimple *encoder;
+  EncoderSimple *encoder;
 };
 #endif
