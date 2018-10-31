@@ -4,13 +4,9 @@
 #include <ros/ros.h>
 #include <sensor_msgs/Range.h>
 #include <Sonar.h>
-
-using namespace Sonar;
-
-//#include <wiringPi.h>
+#include <wiringPi.h>
 
 // Maximum distance reported. Values over this distance
-// report MAX_DISTANCE. TODO make this a property.
 float Sonar::MAX_DISTANCE = 30;
 const Sonar::DIST_SCALE = 58.0;
 const Sonar::TRAVEL_TIME_MAX = MAX_DISTANCE * DIST_SCALE;
@@ -30,8 +26,10 @@ Sonar::distance(bool *error)
       return 0;
     }
   }
-  long startTime = micros();
-  long travelTime = 0;
+
+  int64_t startTime = micros();
+  int64_t travelTime = 0;
+ 
   while (digitalRead(echo_) == HIGH)
   {
     travelTime = micros() - startTime;
@@ -40,6 +38,7 @@ Sonar::distance(bool *error)
       travelTime = TRAVEL_TIME_MAX;
       break;
     }
+
     delayMicroseconds(100);
   }
 
@@ -48,7 +47,6 @@ Sonar::distance(bool *error)
   return travelTime / 58.0;
 }
 }
-
 
 int main(int argc, char **argv)
 {
@@ -60,8 +58,9 @@ int main(int argc, char **argv)
   ros::Rate rate(10); // 10 hz
 
   // Build N sonars.
-  wiringPiSetupSys(); // uses gpio pin numbering
-  // TODO: config these
+  wiringPiSetupSys(); 
+  
+  // uses gpio pin numbering
   vector<hc_sr04_node::Sonar> sonars;
   sonars.push_back(hc_sr04_node::Sonar(24, 25));
   sonars.push_back(hc_sr04_node::Sonar(22, 23));
