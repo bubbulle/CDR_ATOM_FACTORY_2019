@@ -7,11 +7,12 @@
 #include <wiringPi.h>
 
 // Maximum distance reported. Values over this distance
-float Sonar::MAX_DISTANCE = 30;
-const Sonar::DIST_SCALE = 58.0;
-const Sonar::TRAVEL_TIME_MAX = MAX_DISTANCE * DIST_SCALE;
+const float Sonar::MAX_DISTANCE = 30;
+const float Sonar::DIST_SCALE = 58.0;
+const float Sonar::TRAVEL_TIME_MAX = MAX_DISTANCE * DIST_SCALE;
+using namespace std;
 
-Sonar::distance(bool *error)
+double Sonar::distance(bool *error)
 {
   digitalWrite(trigger_, HIGH);
   delayMicroseconds(20);
@@ -46,7 +47,7 @@ Sonar::distance(bool *error)
   *error = false;
   return travelTime / 58.0;
 }
-}
+
 
 int main(int argc, char **argv)
 {
@@ -61,10 +62,10 @@ int main(int argc, char **argv)
   wiringPiSetupSys(); 
   
   // uses gpio pin numbering
-  vector<hc_sr04_node::Sonar> sonars;
-  sonars.push_back(hc_sr04_node::Sonar(24, 25));
-  sonars.push_back(hc_sr04_node::Sonar(22, 23));
-  sonars.push_back(hc_sr04_node::Sonar(18, 27));
+  vector<Sonar::Sonar> sonars;
+  sonars.push_back(Sonar::Sonar(24, 25));
+  sonars.push_back(Sonar::Sonar(22, 23));
+  sonars.push_back(Sonar::Sonar(18, 27));
 
   // Build a publisher for each sonar.
   vector<ros::Publisher> sonar_pubs;
@@ -80,7 +81,7 @@ int main(int argc, char **argv)
   sensor_msgs::Range range;
   range.radiation_type = sensor_msgs::Range::ULTRASOUND;
   range.min_range = 0.0;
-  range.max_range = hc_sr04_node::MAX_DISTANCE;
+  range.max_range = Sonar::MAX_DISTANCE;
 
   float distance;
   bool error;
