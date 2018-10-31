@@ -1,13 +1,19 @@
+#include <vector>
 #include <stdio.h>
-#include <string.h>
-#include <errno.h>
+
 #include <stdlib.h>
-#include "IncrementalEncoder.h"
-#include "std_msgs/Int32.h"
 #include <ros/ros.h>
+#include <string.h>
+#include "IncrementalEncoder.h"
+#include <sstream>
+#include "std_msgs/String.h"
+#include "std_msgs/Int32.h"
+#include <wiringPi.h>
+
+using namespace std;
 
 
-IncrementalEncoder::IncrementalEncoder(int pinADroit, int pinBGauche)
+IncrementalEncoder::IncrementalEncoder(int pinA, int pinB)
 {
     this->pinA = pinADroit;
     this->pinB = pinBGauche;
@@ -17,21 +23,21 @@ IncrementalEncoder::IncrementalEncoder(int pinADroit, int pinBGauche)
 
 void IncrementalEncoder::increment()
 {
-    ++encoder->pos;
+   int signalA = digitalRead(encoder->pinSignalA);
+   int signalB = digitalRead(encoder->pinSignalB);
+   
+   if (signalB == HIGH){
+      --encoder->pos;
+   }
+
+   else{
+      ++encoder->pos;
+   }
 }
 
-void IncrementalEncoder::decrement()
-{
-    --encoder->pos;
-}
+
 
 void IncrementalEncoder::init()
-
-  /*
-    Attention
-    Les pins 2 & 3 du GPIO sont utilisés pour les interruptions. 
-    Les pins correspondent à des numéros d'interruptions qui sont respectivement 0 & 1.
-   */
 {
     //Initialisation des encodeurs
     if (pinB == 2)
@@ -42,34 +48,74 @@ void IncrementalEncoder::init()
     encoder->pinSignalB = pinB;
 
     encoder->pos = 0;
+
+   wiringPiISR (encoder->pinA, INT_EDGE_FALLING, &myInterrupt)
+   pinMode(encoder->pinB, _IOS_IMPUT);    
 }
 
-// main
-int main(void) {
-    ros::NodeHandle nh;
-    std_msgs::Int32 str_msg;
-    ros::Publisher chatter("/Encoder/", &str_msg); // Test uniquement sur l'encodeur gauche  
 
+
+int main(int argc, char **argv)
+{
+    // Debut de la node .
+    ROS_INFO("Starting node");
+    ros::init(argc, argv, "/Encodeur");
+    ros::NodeHandle node;
+    ros::Rate rate(10);
+
+    wiringPiSetup();
     
-    wiringPiSetup () ;
-    pinMode(0,_IOS_OUTPUT)
-  if (wiringPiSetup () < 0) {
-      fprintf (stderr, "Unable to setup wiringPi: %s\n", strerror (errno));
-      return 1;
-  }
+    if (wiringPiSetup() < 0)
+    {
+        fprintf(stderr, "Unable to setup wiringPi: %s\n", strerror(errno));
+        return 1;
+    }
 
-  // set Pin 17/0 generate an interrupt on high-to-low transitions
-  // and attach myInterrupt() to the interrupt
-  if ( wiringPiISR (BUTTON_PIN, INT_EDGE_FALLING, &myInterrupt) < 0 ) {
-      fprintf (stderr, "Unable to setup ISR: %s\n", strerror (errno));
-      return 1;
-  }
+    vector<IncrementalEncoder::IncrementalEncoder> incrementalEncoderList;
+    incrementalEncoderList.push_back(IncrementalEncoder::IncrementalEncoder(7, 8)); // Encodeur droit
+    incrementalEncoderList.push_back(IncrementalEncoder::IncrementalEncoder(2, 3)); // Encodeur Gauche
 
-  // display counter value every second.
-  while ( 1 ) {
-    printf( "%d\n", eventCounter );
-    eventCounter = 0;
-    delay( 1000 ); // wait 1 second
-  }
-  return 0;
+    vector<ros::Publisher> encodeur_pubs;
+
+    // Construire un Publisher pour chaque encodeur.
+    for (int i = 0; i < incrementalEncoderList.size(); ++i)
+    {
+        stringstream ss;
+        ss << "Encodeur_" << i;
+        encodeur_pubs.push_back(node.advertise<std_msgs::Int32>(ss.str(), 10));
+    }
+
+    std_msgs::Int32 str_msg;
+
+   
+    while (ros::ok())
+    {
+        for (int i = 0; i < incrementalEncoderList.size(); ++i)
+        {
+            str_msg.data = incrementalEncoderList.at[i]->pos;
+            ROS_INFO("%d", str_msg.data);
+            encodeur_pubs[i].publish(&str_msg);
+        }
+    }
+    
+    /*
+    pinMode(0, _IOS_OUTPUT) 
+
+    // set Pin 17/0 generate an interrupt on high-to-low transitions
+    // and attach myInterrupt() to the interrupt
+    if (wiringPiISR(BUTTON_PIN, INT_EDGE_FALLING, &myInterrupt) < 0)
+    {
+        fprintf(stderr, "Unable to setup ISR: %s\n", strerror(errno));
+        return 1;
+    }
+
+    // display counter value every second.
+    while (1)
+    {
+        printf("%d\n", eventCounter);
+        eventCounter = 0;
+        delay(1000); // wait 1 second
+    }
+    return 0;
+    */
 }
