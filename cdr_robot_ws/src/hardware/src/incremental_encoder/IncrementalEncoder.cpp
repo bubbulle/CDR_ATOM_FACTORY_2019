@@ -1,6 +1,5 @@
 #include <vector>
 #include <stdio.h>
-
 #include <stdlib.h>
 #include <ros/ros.h>
 #include <string.h>
@@ -12,48 +11,31 @@
 
 using namespace std;
 
-
 IncrementalEncoder::IncrementalEncoder(int pinA, int pinB)
 {
-    this->pinA = pinADroit;
-    this->pinB = pinBGauche;
+    this->pinA = pinA;
+    this->pinB = pinB;
+    this->pos = 0;
+    wiringPiISR(encoder->pinA, INT_EDGE_RISING, &myInterrupt)
+    pinMode(encoder->pinB, _IOS_IMPUT);
 
-    init();
 }
 
 void IncrementalEncoder::increment()
 {
-   int signalA = digitalRead(encoder->pinSignalA);
-   int signalB = digitalRead(encoder->pinSignalB);
-   
-   if (signalB == HIGH){
-      --encoder->pos;
-   }
+    int signalA = digitalRead(pinA);
+    int signalB = digitalRead(pinB);
 
-   else{
-      ++encoder->pos;
-   }
+    if (signalB == HIGH)
+    {
+        --pos;
+    }
+
+    else
+    {
+        ++pos;
+    }
 }
-
-
-
-void IncrementalEncoder::init()
-{
-    //Initialisation des encodeurs
-    if (pinB == 2)
-        encoder->pinSignalA = 0;
-    if (pinB == 3)
-        encoder->pinSignalA = 1;
-
-    encoder->pinSignalB = pinB;
-
-    encoder->pos = 0;
-
-   wiringPiISR (encoder->pinA, INT_EDGE_FALLING, &myInterrupt)
-   pinMode(encoder->pinB, _IOS_IMPUT);    
-}
-
-
 
 int main(int argc, char **argv)
 {
@@ -64,7 +46,7 @@ int main(int argc, char **argv)
     ros::Rate rate(10);
 
     wiringPiSetup();
-    
+
     if (wiringPiSetup() < 0)
     {
         fprintf(stderr, "Unable to setup wiringPi: %s\n", strerror(errno));
@@ -72,8 +54,8 @@ int main(int argc, char **argv)
     }
 
     vector<IncrementalEncoder::IncrementalEncoder> incrementalEncoderList;
-    incrementalEncoderList.push_back(IncrementalEncoder::IncrementalEncoder(7, 8)); // Encodeur droit
-    incrementalEncoderList.push_back(IncrementalEncoder::IncrementalEncoder(2, 3)); // Encodeur Gauche
+    incrementalEncoderList.push_back(IncrementalEncoder::IncrementalEncoder(7, 8));   // Encodeur 1
+    incrementalEncoderList.push_back(IncrementalEncoder::IncrementalEncoder(17, 18)); // Encodeur 2
 
     vector<ros::Publisher> encodeur_pubs;
 
@@ -87,7 +69,6 @@ int main(int argc, char **argv)
 
     std_msgs::Int32 str_msg;
 
-   
     while (ros::ok())
     {
         for (int i = 0; i < incrementalEncoderList.size(); ++i)
@@ -97,25 +78,5 @@ int main(int argc, char **argv)
             encodeur_pubs[i].publish(&str_msg);
         }
     }
-    
-    /*
-    pinMode(0, _IOS_OUTPUT) 
-
-    // set Pin 17/0 generate an interrupt on high-to-low transitions
-    // and attach myInterrupt() to the interrupt
-    if (wiringPiISR(BUTTON_PIN, INT_EDGE_FALLING, &myInterrupt) < 0)
-    {
-        fprintf(stderr, "Unable to setup ISR: %s\n", strerror(errno));
-        return 1;
-    }
-
-    // display counter value every second.
-    while (1)
-    {
-        printf("%d\n", eventCounter);
-        eventCounter = 0;
-        delay(1000); // wait 1 second
-    }
     return 0;
-    */
 }

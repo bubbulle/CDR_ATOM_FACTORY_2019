@@ -14,17 +14,11 @@
  * 
 */
 
-#ifndef IncremantalEncoder_h
-#define IncremantalEncoder_h
+#ifndef IncrementalEncoder_h
+#define IncrementalEncoder_h
+#endif
 #include <stdint.h>
 
-typedef struct //Encodeur simple sans push-pull
-{
-  uint32_t pinSignalA;
-  uint32_t pinSignalB;
-
-  volatile uint32_t pos; // Position (en nombre de pas) du codeur
-} EncoderSimple;
 
 class IncrementalEncoder
 {
@@ -38,7 +32,6 @@ private:
   
   uint8_t pinA;
   uint8_t pinB;
-
-  EncoderSimple *encoder;
+  volatile uint32_t pos; // Position (en nombre de pas) du codeur
+  
 };
-#endif
