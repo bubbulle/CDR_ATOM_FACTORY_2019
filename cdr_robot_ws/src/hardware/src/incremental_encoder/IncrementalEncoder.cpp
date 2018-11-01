@@ -16,9 +16,8 @@ IncrementalEncoder::IncrementalEncoder(int pinA, int pinB)
     this->pinA = pinA;
     this->pinB = pinB;
     this->pos = 0;
-    wiringPiISR(encoder->pinA, INT_EDGE_RISING, &myInterrupt)
-    pinMode(encoder->pinB, _IOS_IMPUT);
-
+    wiringPiISR(pinA, INT_EDGE_RISING, &myInterrupt);
+    pinMode(pinB, _IOS_IMPUT);
 }
 
 void IncrementalEncoder::increment()
@@ -27,14 +26,10 @@ void IncrementalEncoder::increment()
     int signalB = digitalRead(pinB);
 
     if (signalB == HIGH)
-    {
         --pos;
-    }
 
     else
-    {
         ++pos;
-    }
 }
 
 int main(int argc, char **argv)

@@ -10,15 +10,19 @@
 const float Sonar::MAX_DISTANCE = 30;
 const float Sonar::DIST_SCALE = 58.0;
 const float Sonar::TRAVEL_TIME_MAX = MAX_DISTANCE * DIST_SCALE;
+
 using namespace std;
 
 double Sonar::distance(bool *error)
 {
+  int64_t startTime = micros();
+  int64_t travelTime = 0;
+  int16_t bail = 1000;
+  
   digitalWrite(trigger_, HIGH);
   delayMicroseconds(20);
   digitalWrite(trigger_, LOW);
 
-  int bail = 1000;
   while (digitalRead(echo_) == LOW)
   {
     if (--bail == 0)
@@ -28,9 +32,6 @@ double Sonar::distance(bool *error)
     }
   }
 
-  int64_t startTime = micros();
-  int64_t travelTime = 0;
- 
   while (digitalRead(echo_) == HIGH)
   {
     travelTime = micros() - startTime;
@@ -39,7 +40,6 @@ double Sonar::distance(bool *error)
       travelTime = TRAVEL_TIME_MAX;
       break;
     }
-
     delayMicroseconds(100);
   }
 
@@ -47,7 +47,6 @@ double Sonar::distance(bool *error)
   *error = false;
   return travelTime / 58.0;
 }
-
 
 int main(int argc, char **argv)
 {
@@ -59,8 +58,8 @@ int main(int argc, char **argv)
   ros::Rate rate(10); // 10 hz
 
   // Build N sonars.
-  wiringPiSetupSys(); 
-  
+  wiringPiSetupSys();
+
   // uses gpio pin numbering
   vector<Sonar::Sonar> sonars;
   sonars.push_back(Sonar::Sonar(24, 25));

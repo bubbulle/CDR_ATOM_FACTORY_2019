@@ -32,6 +32,5 @@ private:
   
   uint8_t pinA;
   uint8_t pinB;
-  volatile uint32_t pos; // Position (en nombre de pas) du codeur
-  
+  volatile uint32_t pos; // Position (en nombre de pas) du codeur 
 };

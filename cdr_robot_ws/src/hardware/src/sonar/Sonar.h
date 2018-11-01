@@ -20,5 +20,3 @@ class Sonar
     int32_t trigger_;
     int32_t echo_;
 };
-    
-    
