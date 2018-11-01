@@ -67,23 +67,14 @@ set(software_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-<<<<<<< HEAD
   set(software_SOURCE_PREFIX /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/software)
   set(software_DEVEL_PREFIX /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel)
-=======
-  set(software_SOURCE_PREFIX /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/software)
-  set(software_DEVEL_PREFIX /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel)
->>>>>>> Gabriel
   set(software_INSTALL_PREFIX "")
   set(software_PREFIX ${software_DEVEL_PREFIX})
 else()
   set(software_SOURCE_PREFIX "")
   set(software_DEVEL_PREFIX "")
-<<<<<<< HEAD
   set(software_INSTALL_PREFIX /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install)
-=======
-  set(software_INSTALL_PREFIX /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install)
->>>>>>> Gabriel
   set(software_PREFIX ${software_INSTALL_PREFIX})
 endif()
 
@@ -119,11 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'software' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-<<<<<<< HEAD
       message(FATAL_ERROR "Project 'software' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/software/${idir}'.  ${_report}")
-=======
-      message(FATAL_ERROR "Project 'software' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/software/${idir}'.  ${_report}")
->>>>>>> Gabriel
     endif()
     _list_append_unique(software_INCLUDE_DIRS ${include})
   endforeach()
@@ -142,11 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-<<<<<<< HEAD
-    foreach(path /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib;/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib;/opt/ros/melodic/lib)
-=======
-    foreach(path /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib;/opt/ros/kinetic/lib)
->>>>>>> Gabriel
+    foreach(path /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

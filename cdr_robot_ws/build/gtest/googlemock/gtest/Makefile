@@ -48,17 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 CMAKE_SOURCE_DIR = /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build
-=======
-CMAKE_SOURCE_DIR = /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -144,24 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/googlemock/gtest/CMakeFiles/progress.marks
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles 0
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/gtest/CMakeFiles/progress.marks
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles 0
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/clean
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/clean
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : clean
 
 # The main clean target
@@ -171,25 +154,16 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/preinstall
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/preinstall
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -197,15 +171,6 @@ depend:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule:
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-.PHONY : depend
-
-# Convenience name for target.
-gtest/gtest/CMakeFiles/gtest.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/CMakeFiles/gtest.dir/rule
-.PHONY : gtest/gtest/CMakeFiles/gtest.dir/rule
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 
 # Convenience name for target.
 gtest_main: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
@@ -213,7 +178,6 @@ gtest_main: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 .PHONY : gtest_main
 
 # fast build rule for target.
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 gtest_main/fast:
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
@@ -222,16 +186,6 @@ gtest_main/fast:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule:
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
-=======
-gtest/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-# Convenience name for target.
-gtest/gtest/CMakeFiles/gtest_main.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/gtest/CMakeFiles/gtest_main.dir/rule
-.PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/rule
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 
 # Convenience name for target.
 gtest: gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
@@ -239,15 +193,9 @@ gtest: gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 .PHONY : gtest
 
 # fast build rule for target.
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 gtest/fast:
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
-=======
-gtest_main/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 
 src/gtest-all.o: src/gtest-all.cc.o
 
@@ -255,11 +203,7 @@ src/gtest-all.o: src/gtest-all.cc.o
 
 # target to build an object file
 src/gtest-all.cc.o:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : src/gtest-all.cc.o
 
 src/gtest-all.i: src/gtest-all.cc.i
@@ -268,11 +212,7 @@ src/gtest-all.i: src/gtest-all.cc.i
 
 # target to preprocess a source file
 src/gtest-all.cc.i:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : src/gtest-all.cc.i
 
 src/gtest-all.s: src/gtest-all.cc.s
@@ -281,11 +221,7 @@ src/gtest-all.s: src/gtest-all.cc.s
 
 # target to generate assembly for a file
 src/gtest-all.cc.s:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : src/gtest-all.cc.s
 
 src/gtest_main.o: src/gtest_main.cc.o
@@ -294,11 +230,7 @@ src/gtest_main.o: src/gtest_main.cc.o
 
 # target to build an object file
 src/gtest_main.cc.o:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : src/gtest_main.cc.o
 
 src/gtest_main.i: src/gtest_main.cc.i
@@ -307,11 +239,7 @@ src/gtest_main.i: src/gtest_main.cc.i
 
 # target to preprocess a source file
 src/gtest_main.cc.i:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : src/gtest_main.cc.i
 
 src/gtest_main.s: src/gtest_main.cc.s
@@ -320,11 +248,7 @@ src/gtest_main.s: src/gtest_main.cc.s
 
 # target to generate assembly for a file
 src/gtest_main.cc.s:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : src/gtest_main.cc.s
 
 # Help Target
@@ -359,10 +283,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/Makefile
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/Makefile
 .PHONY : cmake_check_build_system
 

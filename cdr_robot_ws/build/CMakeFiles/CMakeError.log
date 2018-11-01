@@ -1,47 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-<<<<<<< HEAD
 Change Dir: /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b5210/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b5210.dir/build.make CMakeFiles/cmTC_b5210.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ec55c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ec55c.dir/build.make CMakeFiles/cmTC_ec55c.dir/build
 make[1]: Entering directory '/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b5210.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b5210.dir/CheckSymbolExists.c.o   -c /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b5210
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5210.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b5210.dir/CheckSymbolExists.c.o  -o cmTC_b5210 
-CMakeFiles/cmTC_b5210.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_ec55c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ec55c.dir/CheckSymbolExists.c.o   -c /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ec55c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec55c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ec55c.dir/CheckSymbolExists.c.o  -o cmTC_ec55c 
+CMakeFiles/cmTC_ec55c.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b5210.dir/build.make:97: recipe for target 'cmTC_b5210' failed
-make[1]: *** [cmTC_b5210] Error 1
+CMakeFiles/cmTC_ec55c.dir/build.make:97: recipe for target 'cmTC_ec55c' failed
+make[1]: *** [cmTC_ec55c] Error 1
 make[1]: Leaving directory '/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_b5210/fast' failed
-make: *** [cmTC_b5210/fast] Error 2
+Makefile:126: recipe for target 'cmTC_ec55c/fast' failed
+make: *** [cmTC_ec55c/fast] Error 2
 
 File /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-=======
-Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_46724/fast"
-/usr/bin/make -f CMakeFiles/cmTC_46724.dir/build.make CMakeFiles/cmTC_46724.dir/build
-make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_46724.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_46724.dir/CheckSymbolExists.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_46724
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46724.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_46724.dir/CheckSymbolExists.c.o  -o cmTC_46724 -rdynamic 
-CMakeFiles/cmTC_46724.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
-CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_46724.dir/build.make:97 : la recette pour la cible « cmTC_46724 » a échouée
-make[1]: *** [cmTC_46724] Erreur 1
-make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
-Makefile:126 : la recette pour la cible « cmTC_46724/fast » a échouée
-make: *** [cmTC_46724/fast] Erreur 2
-
-File /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
->>>>>>> Gabriel
 /* */
 #include <pthread.h>
 
@@ -57,42 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-<<<<<<< HEAD
 Change Dir: /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_407fd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_407fd.dir/build.make CMakeFiles/cmTC_407fd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f02dc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f02dc.dir/build.make CMakeFiles/cmTC_f02dc.dir/build
 make[1]: Entering directory '/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_407fd.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_407fd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_407fd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_407fd.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_407fd.dir/CheckFunctionExists.c.o  -o cmTC_407fd -lpthreads 
+Building C object CMakeFiles/cmTC_f02dc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f02dc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f02dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f02dc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f02dc.dir/CheckFunctionExists.c.o  -o cmTC_f02dc -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_407fd.dir/build.make:97: recipe for target 'cmTC_407fd' failed
-make[1]: *** [cmTC_407fd] Error 1
+CMakeFiles/cmTC_f02dc.dir/build.make:97: recipe for target 'cmTC_f02dc' failed
+make[1]: *** [cmTC_f02dc] Error 1
 make[1]: Leaving directory '/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_407fd/fast' failed
-make: *** [cmTC_407fd/fast] Error 2
-=======
-Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_bb092/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bb092.dir/build.make CMakeFiles/cmTC_bb092.dir/build
-make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_bb092.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bb092.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_bb092
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb092.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bb092.dir/CheckFunctionExists.c.o  -o cmTC_bb092 -rdynamic -lpthreads 
-/usr/bin/ld : ne peut trouver -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_bb092.dir/build.make:97 : la recette pour la cible « cmTC_bb092 » a échouée
-make[1]: *** [cmTC_bb092] Erreur 1
-make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
-Makefile:126 : la recette pour la cible « cmTC_bb092/fast » a échouée
-make: *** [cmTC_bb092/fast] Erreur 2
->>>>>>> Gabriel
+Makefile:126: recipe for target 'cmTC_f02dc/fast' failed
+make: *** [cmTC_f02dc/fast] Error 2
 
 

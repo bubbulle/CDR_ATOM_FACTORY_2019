@@ -48,22 +48,14 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build
-=======
-CMAKE_SOURCE_DIR = /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build
->>>>>>> Gabriel
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-<<<<<<< HEAD
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -76,18 +68,44 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-=======
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install
->>>>>>> Gabriel
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
@@ -106,108 +124,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-<<<<<<< HEAD
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-=======
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
->>>>>>> Gabriel
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-<<<<<<< HEAD
-=======
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
->>>>>>> Gabriel
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software/CMakeFiles/progress.marks
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles 0
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software/CMakeFiles/progress.marks
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles 0
->>>>>>> Gabriel
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/clean
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/clean
->>>>>>> Gabriel
 .PHONY : clean
 
 # The main clean target
@@ -217,127 +143,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/preinstall
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/preinstall
->>>>>>> Gabriel
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/preinstall
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/preinstall
->>>>>>> Gabriel
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-software/CMakeFiles/simple_pid.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/simple_pid.dir/rule
-.PHONY : software/CMakeFiles/simple_pid.dir/rule
-
-# Convenience name for target.
-simple_pid: software/CMakeFiles/simple_pid.dir/rule
-
-.PHONY : simple_pid
-
-# fast build rule for target.
-simple_pid/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/simple_pid.dir/build.make software/CMakeFiles/simple_pid.dir/build
-.PHONY : simple_pid/fast
-
-# Convenience name for target.
-software/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : software/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: software/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make software/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-software/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : software/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: software/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make software/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-software/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : software/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-.PHONY : depend
-
-# Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
->>>>>>> Gabriel
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: software/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-<<<<<<< HEAD
-std_msgs_generate_messages_cpp/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make software/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 software/CMakeFiles/test.dir/rule:
@@ -355,29 +172,19 @@ test/fast:
 .PHONY : test/fast
 
 # Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-=======
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
+software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
->>>>>>> Gabriel
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+geometry_msgs_generate_messages_eus: software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_eus
 
 # fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-<<<<<<< HEAD
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 software/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
@@ -395,19 +202,19 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-software/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : software/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+software/CMakeFiles/simple_pid.dir/rule:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/simple_pid.dir/rule
+.PHONY : software/CMakeFiles/simple_pid.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_lisp: software/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+simple_pid: software/CMakeFiles/simple_pid.dir/rule
 
-.PHONY : roscpp_generate_messages_lisp
+.PHONY : simple_pid
 
 # fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make software/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
+simple_pid/fast:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/simple_pid.dir/build.make software/CMakeFiles/simple_pid.dir/build
+.PHONY : simple_pid/fast
 
 # Convenience name for target.
 software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
@@ -425,194 +232,34 @@ geometry_msgs_generate_messages_cpp/fast:
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-software/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : software/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: software/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+geometry_msgs_generate_messages_lisp: software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : roscpp_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_lisp
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make software/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-software/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : software/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: software/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make software/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-software/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : software/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: software/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make software/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-software/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : software/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: software/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make software/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-software/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : software/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: software/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make software/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-software/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : software/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: software/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make software/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-software/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : software/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: software/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make software/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-software/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : software/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: software/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/roscpp_generate_messages_eus.dir/build.make software/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-software/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : software/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: software/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/std_msgs_generate_messages_py.dir/build.make software/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-software/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : software/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
->>>>>>> Gabriel
+software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_cpp: software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+geometry_msgs_generate_messages_py: software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_py
 
 # fast build rule for target.
-<<<<<<< HEAD
-roscpp_generate_messages_nodejs/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make software/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-software/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : software/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: software/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/roscpp_generate_messages_py.dir/build.make software/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
+geometry_msgs_generate_messages_py/fast:
+	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 src/pid/motor_controller.o: src/pid/motor_controller.cpp.o
 
@@ -694,26 +341,6 @@ src/pid/test.s: src/pid/test.cpp.s
 src/pid/test.cpp.s:
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/test.dir/build.make software/CMakeFiles/test.dir/src/pid/test.cpp.s
 .PHONY : src/pid/test.cpp.s
-=======
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: software/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f software/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make software/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
->>>>>>> Gabriel
 
 # Help Target
 help:
@@ -721,35 +348,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-<<<<<<< HEAD
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... rebuild_cache"
-	@echo "... simple_pid"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... install"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... test"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... list_install_components"
+	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... rebuild_cache"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... simple_pid"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... src/pid/motor_controller.o"
 	@echo "... src/pid/motor_controller.i"
 	@echo "... src/pid/motor_controller.s"
@@ -759,20 +370,6 @@ help:
 	@echo "... src/pid/test.o"
 	@echo "... src/pid/test.i"
 	@echo "... src/pid/test.s"
-=======
-	@echo "... install"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... rebuild_cache"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... test"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... edit_cache"
->>>>>>> Gabriel
 .PHONY : help
 
 
@@ -784,10 +381,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	cd /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> Gabriel
 .PHONY : cmake_check_build_system
 

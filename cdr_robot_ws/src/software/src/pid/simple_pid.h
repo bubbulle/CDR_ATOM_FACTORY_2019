@@ -1,9 +1,6 @@
 #ifndef DEF_SIMPLE_PID
 #define DEF_SIMPLE_PID
 
-#include <memory>
-#include <iostream>
-
 #define _USE_MATH_DEFINES
 #include <cmath>
 
@@ -20,7 +17,7 @@ class Simple_Pid
 
         bool setParams();
 
-        void update(float_t encoder_val);
+        void update_output(float_t encoder_val);
 
         void spinOnce(const std_msgs::Float32::ConstPtr& encoder_msg);
         void spin();

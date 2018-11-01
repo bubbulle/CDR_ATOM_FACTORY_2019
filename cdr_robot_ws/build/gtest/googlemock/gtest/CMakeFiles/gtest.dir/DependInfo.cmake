@@ -4,11 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake
   "/usr/src/googletest/googletest/src/gtest-all.cc" "/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-=======
-  "/usr/src/gtest/src/gtest-all.cc" "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

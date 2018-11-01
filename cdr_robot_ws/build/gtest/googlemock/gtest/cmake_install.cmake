@@ -2,11 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-<<<<<<< HEAD:cdr_robot_ws/build/gtest/googlemock/gtest/cmake_install.cmake
   set(CMAKE_INSTALL_PREFIX "/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install")
-=======
-  set(CMAKE_INSTALL_PREFIX "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install")
->>>>>>> Gabriel:cdr_robot_ws/build/gtest/gtest/cmake_install.cmake
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

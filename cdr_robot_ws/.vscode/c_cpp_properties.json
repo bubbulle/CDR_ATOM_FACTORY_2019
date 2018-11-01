@@ -6,14 +6,10 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
-<<<<<<< HEAD
                 "/opt/ros/melodic/include",
-                "/usr/include"
-=======
-                "/opt/ros/kinetic/include",
                 "/usr/include",
-                "${workspaceFolder}/src/hardware/src/sonar"
->>>>>>> Gabriel
+                "${workspaceFolder}/src/motor_encoder_controller/include",
+                "${workspaceFolder}/src/dvb_hardware/include"
             ],
             "name": "Linux",
             "intelliSenseMode": "gcc-x64"

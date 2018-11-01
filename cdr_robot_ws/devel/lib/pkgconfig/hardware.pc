@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 prefix=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel
-=======
-prefix=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel
->>>>>>> Gabriel
 
 Name: hardware
 Description: Description of hardware
 Version: 0.0.0
 Cflags: 
-<<<<<<< HEAD
 Libs: -L/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib 
-=======
-Libs: -L/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib 
->>>>>>> Gabriel
 Requires: 

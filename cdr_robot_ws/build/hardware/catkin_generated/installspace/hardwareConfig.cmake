@@ -67,23 +67,14 @@ set(hardware_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-<<<<<<< HEAD
   set(hardware_SOURCE_PREFIX /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/hardware)
   set(hardware_DEVEL_PREFIX /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel)
-=======
-  set(hardware_SOURCE_PREFIX /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/hardware)
-  set(hardware_DEVEL_PREFIX /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel)
->>>>>>> Gabriel
   set(hardware_INSTALL_PREFIX "")
   set(hardware_PREFIX ${hardware_DEVEL_PREFIX})
 else()
   set(hardware_SOURCE_PREFIX "")
   set(hardware_DEVEL_PREFIX "")
-<<<<<<< HEAD
   set(hardware_INSTALL_PREFIX /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install)
-=======
-  set(hardware_INSTALL_PREFIX /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install)
->>>>>>> Gabriel
   set(hardware_PREFIX ${hardware_INSTALL_PREFIX})
 endif()
 
@@ -119,11 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'hardware' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-<<<<<<< HEAD
       message(FATAL_ERROR "Project 'hardware' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/${idir}'.  ${_report}")
-=======
-      message(FATAL_ERROR "Project 'hardware' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/${idir}'.  ${_report}")
->>>>>>> Gabriel
     endif()
     _list_append_unique(hardware_INCLUDE_DIRS ${include})
   endforeach()
@@ -142,11 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-<<<<<<< HEAD
-    foreach(path /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/lib;/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib;/opt/ros/melodic/lib)
-=======
-    foreach(path /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/lib;/opt/ros/kinetic/lib)
->>>>>>> Gabriel
+    foreach(path /home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -169,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(hardware_EXPORTED_TARGETS "hardware_generate_messages_cpp;hardware_generate_messages_eus;hardware_generate_messages_lisp;hardware_generate_messages_nodejs;hardware_generate_messages_py")
+set(hardware_EXPORTED_TARGETS "")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${hardware_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -206,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND hardware_EXPORTED_TARGETS ${${hardware_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "hardware-msg-extras.cmake")
+set(pkg_cfg_extras "")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${hardware_DIR}/${extra})
