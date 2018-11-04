@@ -1,13 +1,13 @@
-#include <motor_encoder_controller/encoder.h>
+#include <dvb_hardware/encoder.h>
 
 int main(int argc, char** argv)
 {
     //Start ROS node
     ros::init(argc, argv, "encoder_controller_node");
 
-    Encoder encoder("test", true);
+    Encoder* encoder_left = new Encoder(std::string("/encoder/left"), true);
 
-    encoder.spin();
+    return 0;
 }
 
 /*// Start ROS node.

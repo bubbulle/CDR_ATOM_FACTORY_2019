@@ -21,8 +21,9 @@ class Encoder : public Hardware
 {
     public:
         Encoder(std::string topic_encoder_name, bool debug_mode);
+        virtual ~Encoder();
 
-        void spinOnce() override;
+        virtual void spinOnce();
 
         int32_t getPos();
 

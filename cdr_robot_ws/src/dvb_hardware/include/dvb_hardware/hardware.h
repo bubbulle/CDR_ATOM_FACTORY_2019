@@ -20,6 +20,8 @@ class Hardware
     public:
         Hardware(bool debug_mode);
 
+        virtual ~Hardware();
+
         void spin();
         virtual void spinOnce();
 

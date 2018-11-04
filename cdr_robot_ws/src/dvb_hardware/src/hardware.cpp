@@ -22,8 +22,8 @@ Hardware::Hardware(bool debug_mode) :
     rate_ = ros::Duration(freq_);
 }
 
-void Hardware::spinOnce(){
-    //Do stuffs
+Hardware::~Hardware(){
+
 }
 
 void Hardware::spin()
@@ -36,6 +36,10 @@ void Hardware::spin()
 		rate_.sleep();
 		ros::spinOnce();
 	}
+}
+
+void Hardware::spinOnce(){
+    
 }
 
 void Hardware::setEnable(bool state)

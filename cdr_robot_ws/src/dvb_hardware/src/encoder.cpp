@@ -44,6 +44,10 @@ Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
     */
 }
 
+Encoder::~Encoder(){
+    
+}
+
 int32_t Encoder::getPos()
 {
     return pos_;

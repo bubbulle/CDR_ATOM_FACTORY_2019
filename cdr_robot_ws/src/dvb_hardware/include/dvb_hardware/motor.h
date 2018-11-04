@@ -8,6 +8,8 @@ class Motor : public Hardware
     public:
         Motor(std::string topic_motor_name, bool debug_mode);
 
+        void spinOnce() override;
+
     private:
         //Topics name
         std::string topic_motor_name_;
