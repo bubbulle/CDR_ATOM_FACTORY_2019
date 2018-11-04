@@ -804,6 +804,19 @@ encoder_controller/fast:
 	$(MAKE) -f encoder_controller/CMakeFiles/encoder_controller.dir/build.make encoder_controller/CMakeFiles/encoder_controller.dir/build
 .PHONY : encoder_controller/fast
 
+#=============================================================================
+# Target rules for targets named a_star
+
+# Build rule for target.
+a_star: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 a_star
+.PHONY : a_star
+
+# fast build rule for target.
+a_star/fast:
+	$(MAKE) -f robot_path_planning/CMakeFiles/a_star.dir/build.make robot_path_planning/CMakeFiles/a_star.dir/build
+.PHONY : a_star/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -866,6 +879,7 @@ help:
 	@echo "... dvb_robot"
 	@echo "... dvb_map"
 	@echo "... encoder_controller"
+	@echo "... a_star"
 .PHONY : help
 
 

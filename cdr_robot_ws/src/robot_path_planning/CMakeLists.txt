@@ -35,3 +35,12 @@ include_directories(
   ${dvb_robot_INCLUDE_DIRS}
   ${dvb_hardware_INCLUDE_DIRS}
 )
+
+add_executable(a_star src/a_star.cpp)
+
+target_link_libraries(a_star
+   dvb_map
+   dvb_robot
+   dvb_hardware
+   ${catkin_LIBRARIES}
+)

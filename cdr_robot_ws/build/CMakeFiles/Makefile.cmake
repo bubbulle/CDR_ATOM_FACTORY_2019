@@ -279,4 +279,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "dvb_map/CMakeFiles/test.dir/DependInfo.cmake"
   "dvb_map/CMakeFiles/dvb_map.dir/DependInfo.cmake"
   "encoder_controller/CMakeFiles/encoder_controller.dir/DependInfo.cmake"
+  "robot_path_planning/CMakeFiles/a_star.dir/DependInfo.cmake"
   )

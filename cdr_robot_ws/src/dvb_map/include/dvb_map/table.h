@@ -36,8 +36,7 @@ class Matrix
 
         std::vector<std::vector<int32_t>> grid_;
 
-    private:
-        int32_t rows_, col_ = 0;
+        int32_t rows_, col_;
 };
 
 class Table: public Map

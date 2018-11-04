@@ -11,7 +11,8 @@
                 "${workspaceFolder}/src/motor_encoder_controller/include",
                 "${workspaceFolder}/src/dvb_hardware/include",
                 "${workspaceFolder}/src/dvb_map/include",
-                "${workspaceFolder}/src/dvb_robot/include"
+                "${workspaceFolder}/src/dvb_robot/include",
+                "${workspaceFolder}/src/robot_path_planning/include"
             ],
             "name": "Linux",
             "intelliSenseMode": "gcc-x64"
