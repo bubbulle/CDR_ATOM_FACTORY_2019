@@ -33,7 +33,7 @@ void A_Star::createAStarMap()
 
             Node node_tmp(pose_tmp, nullptr, destination_);
 
-            a_star_map_[i][j] = node_tmp;
+            //a_star_map_[i][j] = node_tmp;
         }
     }
 }

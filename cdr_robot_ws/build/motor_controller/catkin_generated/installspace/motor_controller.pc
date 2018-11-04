@@ -3,6 +3,6 @@ prefix=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install
 Name: motor_controller
 Description: Description of motor_controller
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/lib 
-Requires: 
+Cflags: -I/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/include
+Libs: -L/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install/lib -lmotor_controller
+Requires: roscpp
