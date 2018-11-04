@@ -18,7 +18,7 @@ find_package(dvb_hardware REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES encoder_controller
-  CATKIN_DEPENDS roscpp
+  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs sensor_msgs
 #  DEPENDS system_lib
 )
 

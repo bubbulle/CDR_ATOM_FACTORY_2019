@@ -18,9 +18,25 @@ class Robot
 {
     public:
         Robot(bool debug_mode);
+        virtual ~Robot();
 
-    private:
+        void setEnable(bool state);
+        void setStartable(bool state);
+
+        bool getEnable();
+        bool getStartable();
+
+    protected:
+        ros::NodeHandle nh_;
+
+        //State
         bool debug_mode_;
+        bool hardware_startable_;
+        bool hardware_enable_;
+
+        //Frequency rate in second
+        ros::Duration rate_;
+        double_t freq_;
         
 };
 

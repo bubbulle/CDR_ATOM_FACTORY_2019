@@ -10,6 +10,7 @@ class Robot_Cdr : public Robot
         ~Robot();
 
     private:
+        //Robot position in the map
         geometry_msgs::Pose2D robot_pos_;
 
 };
