@@ -40,6 +40,14 @@ Motor::Motor(std::string topic_motor_name, bool debug_mode) :
 	sub_motor_ = nh_.subscribe(topic_motor_name_.c_str(), 10, &Motor::control_callback, this);
 }
 
+Motor::~Motor(){
+
+}
+
+void Motor::spinOnce(){
+    
+}
+
 void Motor::control_motor(int32_t pwm, bool trigo_dir)
 {
     //Set PWM

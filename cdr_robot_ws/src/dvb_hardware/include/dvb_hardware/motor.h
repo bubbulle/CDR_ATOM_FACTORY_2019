@@ -7,8 +7,9 @@ class Motor : public Hardware
 {
     public:
         Motor(std::string topic_motor_name, bool debug_mode);
+        virtual ~Motor();
 
-        void spinOnce() override;
+        virtual void spinOnce();
 
     private:
         //Topics name

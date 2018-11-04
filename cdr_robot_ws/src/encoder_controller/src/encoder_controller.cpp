@@ -7,6 +7,8 @@ int main(int argc, char** argv)
 
     Encoder* encoder_left = new Encoder(std::string("/encoder/left"), true);
 
+    encoder_left->spin();
+
     return 0;
 }
 

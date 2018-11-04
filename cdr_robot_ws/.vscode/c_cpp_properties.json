@@ -9,7 +9,9 @@
                 "/opt/ros/melodic/include",
                 "/usr/include",
                 "${workspaceFolder}/src/motor_encoder_controller/include",
-                "${workspaceFolder}/src/dvb_hardware/include"
+                "${workspaceFolder}/src/dvb_hardware/include",
+                "${workspaceFolder}/src/dvb_map/include",
+                "${workspaceFolder}/src/dvb_robot/include"
             ],
             "name": "Linux",
             "intelliSenseMode": "gcc-x64"

@@ -6,8 +6,6 @@ Hardware::Hardware(bool debug_mode) :
     hardware_enable_(false),
     freq_(0.001) //1 ms
 {   
-    //Debug mode
-    debug_mode_ = debug_mode;
 
     /*
 		Get all params for ros server
@@ -16,7 +14,7 @@ Hardware::Hardware(bool debug_mode) :
         nh_.param<double_t>("/frequency", freq_);
     }
     else{
-		ROS_INFO("Please check if FREQUENCY parameters is set in the ROS Parameter Server !\n");
+		ROS_WARN("Please check if FREQUENCY parameters is set in the ROS Parameter Server !\n");
 	}
 
     rate_ = ros::Duration(freq_);
@@ -29,6 +27,7 @@ Hardware::~Hardware(){
 void Hardware::spin()
 {
     //Wait for initialization
+    ROS_INFO_COND(debug_mode_, "Hardware spin function called !");
     ros::Duration(0.5).sleep();
 
 	while(ros::ok()){

@@ -29,7 +29,7 @@ Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
         hardware_startable_ = true;
     }
     else{
-		ROS_INFO("Please check if encoder PIN parameters are set in the ROS Parameter Server !\n");
+		ROS_WARN("Please check if encoder PIN parameters are set in the ROS Parameter Server !\n");
 	}
 
     /*
@@ -74,14 +74,15 @@ void Encoder::increment()
    encoder_pos.data = pos_;
 
    pub_encoder_.publish(encoder_pos);
+
+   ROS_INFO_COND(debug_mode_, "%s : %d", topic_encoder_name_.c_str(), pos_);
 }
 
 void Encoder::spinOnce(){
     if(hardware_enable_ && hardware_startable_){
         increment();
-        ROS_INFO_COND(debug_mode_, "%s : %d", topic_encoder_name_.c_str(), pos_);
-	  }
-	  else{
-		    ROS_INFO_COND(debug_mode_,"Encoder disabled");
-	  }
+	}
+	else{
+        ROS_INFO_COND(debug_mode_,"Encoder disabled");
+	}
 }

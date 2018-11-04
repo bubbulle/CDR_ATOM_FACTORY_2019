@@ -1,6 +1,40 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(motor_controller)
 
+find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
+  nav_msgs
+  roscpp
+  rospy
+  std_msgs
+  sensor_msgs
+)
+
+find_package(dvb_hardware REQUIRED)
+
+###################################
+## catkin specific configuration ##
+###################################
+catkin_package(
+  INCLUDE_DIRS include
+  LIBRARIES motor_controller
+  CATKIN_DEPENDS roscpp
+#  DEPENDS system_lib
+)
+
+include_directories(
+ include
+  ${catkin_INCLUDE_DIRS}
+  ${dvb_hardware_INCLUDE_DIRS}
+)
+
+add_executable(motor_controller src/motor_controller.cpp)
+
+target_link_libraries(motor_controller
+   dvb_hardware
+   ${catkin_LIBRARIES}
+)
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
