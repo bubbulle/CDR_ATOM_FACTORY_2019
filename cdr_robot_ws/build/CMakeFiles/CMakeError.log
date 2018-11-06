@@ -1,6 +1,7 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_d4a07/fast"
 /usr/bin/make -f CMakeFiles/cmTC_d4a07.dir/build.make CMakeFiles/cmTC_d4a07.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -17,6 +18,24 @@ make[1]: *** [cmTC_d4a07] Erreur 1
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 Makefile:126 : la recette pour la cible « cmTC_d4a07/fast » a échouée
 make: *** [cmTC_d4a07/fast] Erreur 2
+=======
+Run Build Command:"/usr/bin/make" "cmTC_f087d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f087d.dir/build.make CMakeFiles/cmTC_f087d.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f087d.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f087d.dir/CheckSymbolExists.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f087d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f087d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f087d.dir/CheckSymbolExists.c.o  -o cmTC_f087d -rdynamic 
+CMakeFiles/cmTC_f087d.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f087d.dir/build.make:97 : la recette pour la cible « cmTC_f087d » a échouée
+make[1]: *** [cmTC_f087d] Erreur 1
+make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_f087d/fast » a échouée
+make: *** [cmTC_f087d/fast] Erreur 2
+>>>>>>> Gabriel
 
 File /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,6 +55,7 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_bcb05/fast"
 /usr/bin/make -f CMakeFiles/cmTC_bcb05.dir/build.make CMakeFiles/cmTC_bcb05.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -51,5 +71,22 @@ make[1]: *** [cmTC_bcb05] Erreur 1
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 Makefile:126 : la recette pour la cible « cmTC_bcb05/fast » a échouée
 make: *** [cmTC_bcb05/fast] Erreur 2
+=======
+Run Build Command:"/usr/bin/make" "cmTC_ea6f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ea6f0.dir/build.make CMakeFiles/cmTC_ea6f0.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_ea6f0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ea6f0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ea6f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea6f0.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ea6f0.dir/CheckFunctionExists.c.o  -o cmTC_ea6f0 -rdynamic -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ea6f0.dir/build.make:97 : la recette pour la cible « cmTC_ea6f0 » a échouée
+make[1]: *** [cmTC_ea6f0] Erreur 1
+make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_ea6f0/fast » a échouée
+make: *** [cmTC_ea6f0/fast] Erreur 2
+>>>>>>> Gabriel
 
 

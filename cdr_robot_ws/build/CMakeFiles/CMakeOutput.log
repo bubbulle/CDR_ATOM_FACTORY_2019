@@ -28,6 +28,7 @@ The CXX compiler identification is GNU, found in "/home/gab/Bureau/DaVinciBot/CD
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_a8b08/fast"
 /usr/bin/make -f CMakeFiles/cmTC_a8b08.dir/build.make CMakeFiles/cmTC_a8b08.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -36,12 +37,23 @@ Building C object CMakeFiles/cmTC_a8b08.dir/testCCompiler.c.o
 Linking C executable cmTC_a8b08
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8b08.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_a8b08.dir/testCCompiler.c.o  -o cmTC_a8b08 -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_dc1ce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dc1ce.dir/build.make CMakeFiles/cmTC_dc1ce.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_dc1ce.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_dc1ce.dir/testCCompiler.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_dc1ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc1ce.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_dc1ce.dir/testCCompiler.c.o  -o cmTC_dc1ce -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_fa7a1/fast"
 /usr/bin/make -f CMakeFiles/cmTC_fa7a1.dir/build.make CMakeFiles/cmTC_fa7a1.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -50,6 +62,16 @@ Building C object CMakeFiles/cmTC_fa7a1.dir/CMakeCCompilerABI.c.o
 Linking C executable cmTC_fa7a1
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa7a1.dir/link.txt --verbose=1
 /usr/bin/cc      -v CMakeFiles/cmTC_fa7a1.dir/CMakeCCompilerABI.c.o  -o cmTC_fa7a1 -rdynamic  
+=======
+Run Build Command:"/usr/bin/make" "cmTC_8c2b4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8c2b4.dir/build.make CMakeFiles/cmTC_8c2b4.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_8c2b4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c2b4.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o  -o cmTC_8c2b4 -rdynamic  
+>>>>>>> Gabriel
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,8 +81,13 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+<<<<<<< HEAD
 COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fa7a1' '-rdynamic' '-mtune=generic' '-march=x86-64'
  /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cca4ZXbC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_fa7a1 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_fa7a1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+=======
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8c2b4' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccW6rgkD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8c2b4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -68,6 +95,7 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp]
   ignore line: []
+<<<<<<< HEAD
   ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fa7a1/fast"]
   ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fa7a1.dir/build.make CMakeFiles/cmTC_fa7a1.dir/build]
   ignore line: [make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »]
@@ -76,6 +104,16 @@ Parsed C implicit link information from above output:
   ignore line: [Linking C executable cmTC_fa7a1]
   ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa7a1.dir/link.txt --verbose=1]
   ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_fa7a1.dir/CMakeCCompilerABI.c.o  -o cmTC_fa7a1 -rdynamic  ]
+=======
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_8c2b4/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8c2b4.dir/build.make CMakeFiles/cmTC_8c2b4.dir/build]
+  ignore line: [make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »]
+  ignore line: [Building C object CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_8c2b4]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c2b4.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o  -o cmTC_8c2b4 -rdynamic  ]
+>>>>>>> Gabriel
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +123,22 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+<<<<<<< HEAD
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fa7a1' '-rdynamic' '-mtune=generic' '-march=x86-64']
   link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cca4ZXbC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_fa7a1 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_fa7a1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+=======
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8c2b4' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccW6rgkD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8c2b4 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+>>>>>>> Gabriel
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+<<<<<<< HEAD
     arg [-plugin-opt=-fresolution=/tmp/cca4ZXbC.res] ==> ignore
+=======
+    arg [-plugin-opt=-fresolution=/tmp/ccW6rgkD.res] ==> ignore
+>>>>>>> Gabriel
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +156,11 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
+<<<<<<< HEAD
     arg [cmTC_fa7a1] ==> ignore
+=======
+    arg [cmTC_8c2b4] ==> ignore
+>>>>>>> Gabriel
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +172,11 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+<<<<<<< HEAD
     arg [CMakeFiles/cmTC_fa7a1.dir/CMakeCCompilerABI.c.o] ==> ignore
+=======
+    arg [CMakeFiles/cmTC_8c2b4.dir/CMakeCCompilerABI.c.o] ==> ignore
+>>>>>>> Gabriel
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -155,6 +210,7 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_ee3bc/fast"
 /usr/bin/make -f CMakeFiles/cmTC_ee3bc.dir/build.make CMakeFiles/cmTC_ee3bc.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -163,6 +219,16 @@ Building C object CMakeFiles/cmTC_ee3bc.dir/feature_tests.c.o
 Linking C executable cmTC_ee3bc
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee3bc.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_ee3bc.dir/feature_tests.c.o  -o cmTC_ee3bc -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_49788/fast"
+/usr/bin/make -f CMakeFiles/cmTC_49788.dir/build.make CMakeFiles/cmTC_49788.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_49788.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_49788.dir/feature_tests.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_49788
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49788.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_49788.dir/feature_tests.c.o  -o cmTC_49788 -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -175,6 +241,7 @@ make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FAC
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_4a813/fast"
 /usr/bin/make -f CMakeFiles/cmTC_4a813.dir/build.make CMakeFiles/cmTC_4a813.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -183,6 +250,16 @@ Building C object CMakeFiles/cmTC_4a813.dir/feature_tests.c.o
 Linking C executable cmTC_4a813
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a813.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_4a813.dir/feature_tests.c.o  -o cmTC_4a813 -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_7f439/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7f439.dir/build.make CMakeFiles/cmTC_7f439.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_7f439.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_7f439.dir/feature_tests.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7f439
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f439.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7f439.dir/feature_tests.c.o  -o cmTC_7f439 -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -195,6 +272,7 @@ make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FAC
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_99a8b/fast"
 /usr/bin/make -f CMakeFiles/cmTC_99a8b.dir/build.make CMakeFiles/cmTC_99a8b.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -203,6 +281,16 @@ Building C object CMakeFiles/cmTC_99a8b.dir/feature_tests.c.o
 Linking C executable cmTC_99a8b
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99a8b.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_99a8b.dir/feature_tests.c.o  -o cmTC_99a8b -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_b89de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b89de.dir/build.make CMakeFiles/cmTC_b89de.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_b89de.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_b89de.dir/feature_tests.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b89de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b89de.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b89de.dir/feature_tests.c.o  -o cmTC_b89de -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -213,6 +301,7 @@ make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FAC
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_60de1/fast"
 /usr/bin/make -f CMakeFiles/cmTC_60de1.dir/build.make CMakeFiles/cmTC_60de1.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -221,12 +310,23 @@ Building CXX object CMakeFiles/cmTC_60de1.dir/testCXXCompiler.cxx.o
 Linking CXX executable cmTC_60de1
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60de1.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_60de1.dir/testCXXCompiler.cxx.o  -o cmTC_60de1 -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_99dd4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_99dd4.dir/build.make CMakeFiles/cmTC_99dd4.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_99dd4.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_99dd4.dir/testCXXCompiler.cxx.o -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_99dd4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99dd4.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_99dd4.dir/testCXXCompiler.cxx.o  -o cmTC_99dd4 -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_487a8/fast"
 /usr/bin/make -f CMakeFiles/cmTC_487a8.dir/build.make CMakeFiles/cmTC_487a8.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -235,6 +335,16 @@ Building CXX object CMakeFiles/cmTC_487a8.dir/CMakeCXXCompilerABI.cpp.o
 Linking CXX executable cmTC_487a8
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_487a8.dir/link.txt --verbose=1
 /usr/bin/c++       -v CMakeFiles/cmTC_487a8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_487a8 -rdynamic  
+=======
+Run Build Command:"/usr/bin/make" "cmTC_72787/fast"
+/usr/bin/make -f CMakeFiles/cmTC_72787.dir/build.make CMakeFiles/cmTC_72787.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_72787
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72787.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_72787 -rdynamic  
+>>>>>>> Gabriel
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,8 +354,13 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+<<<<<<< HEAD
 COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_487a8' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
  /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccD5K03X.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_487a8 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_487a8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+=======
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72787' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUWAKvQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_72787 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -253,6 +368,7 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp]
   ignore line: []
+<<<<<<< HEAD
   ignore line: [Run Build Command:"/usr/bin/make" "cmTC_487a8/fast"]
   ignore line: [/usr/bin/make -f CMakeFiles/cmTC_487a8.dir/build.make CMakeFiles/cmTC_487a8.dir/build]
   ignore line: [make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »]
@@ -261,6 +377,16 @@ Parsed CXX implicit link information from above output:
   ignore line: [Linking CXX executable cmTC_487a8]
   ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_487a8.dir/link.txt --verbose=1]
   ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_487a8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_487a8 -rdynamic  ]
+=======
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_72787/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_72787.dir/build.make CMakeFiles/cmTC_72787.dir/build]
+  ignore line: [make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »]
+  ignore line: [Building CXX object CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_72787]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72787.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_72787 -rdynamic  ]
+>>>>>>> Gabriel
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +396,22 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+<<<<<<< HEAD
   ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_487a8' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
   link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccD5K03X.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_487a8 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_487a8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+=======
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_72787' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUWAKvQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_72787 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+>>>>>>> Gabriel
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+<<<<<<< HEAD
     arg [-plugin-opt=-fresolution=/tmp/ccD5K03X.res] ==> ignore
+=======
+    arg [-plugin-opt=-fresolution=/tmp/ccUWAKvQ.res] ==> ignore
+>>>>>>> Gabriel
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +429,11 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
+<<<<<<< HEAD
     arg [cmTC_487a8] ==> ignore
+=======
+    arg [cmTC_72787] ==> ignore
+>>>>>>> Gabriel
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +445,11 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+<<<<<<< HEAD
     arg [CMakeFiles/cmTC_487a8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+=======
+    arg [CMakeFiles/cmTC_72787.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+>>>>>>> Gabriel
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -338,6 +481,7 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_4c3c2/fast"
 /usr/bin/make -f CMakeFiles/cmTC_4c3c2.dir/build.make CMakeFiles/cmTC_4c3c2.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -346,6 +490,16 @@ Building CXX object CMakeFiles/cmTC_4c3c2.dir/feature_tests.cxx.o
 Linking CXX executable cmTC_4c3c2
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c3c2.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_4c3c2.dir/feature_tests.cxx.o  -o cmTC_4c3c2 -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_05aee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_05aee.dir/build.make CMakeFiles/cmTC_05aee.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_05aee.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_05aee.dir/feature_tests.cxx.o -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_05aee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05aee.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_05aee.dir/feature_tests.cxx.o  -o cmTC_05aee -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -411,6 +565,7 @@ make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FAC
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_58261/fast"
 /usr/bin/make -f CMakeFiles/cmTC_58261.dir/build.make CMakeFiles/cmTC_58261.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -419,6 +574,16 @@ Building CXX object CMakeFiles/cmTC_58261.dir/feature_tests.cxx.o
 Linking CXX executable cmTC_58261
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58261.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_58261.dir/feature_tests.cxx.o  -o cmTC_58261 -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_a53f2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a53f2.dir/build.make CMakeFiles/cmTC_a53f2.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_a53f2.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_a53f2.dir/feature_tests.cxx.o -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a53f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a53f2.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_a53f2.dir/feature_tests.cxx.o  -o cmTC_a53f2 -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -484,6 +649,7 @@ make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FAC
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_8d9ef/fast"
 /usr/bin/make -f CMakeFiles/cmTC_8d9ef.dir/build.make CMakeFiles/cmTC_8d9ef.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -492,6 +658,16 @@ Building CXX object CMakeFiles/cmTC_8d9ef.dir/feature_tests.cxx.o
 Linking CXX executable cmTC_8d9ef
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d9ef.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_8d9ef.dir/feature_tests.cxx.o  -o cmTC_8d9ef -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_9a451/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a451.dir/build.make CMakeFiles/cmTC_9a451.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_9a451.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_9a451.dir/feature_tests.cxx.o -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_9a451
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a451.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_9a451.dir/feature_tests.cxx.o  -o cmTC_9a451 -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
@@ -555,6 +731,7 @@ make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FAC
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_51944/fast"
 /usr/bin/make -f CMakeFiles/cmTC_51944.dir/build.make CMakeFiles/cmTC_51944.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -563,12 +740,23 @@ Building C object CMakeFiles/cmTC_51944.dir/CheckIncludeFile.c.o
 Linking C executable cmTC_51944
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51944.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_51944.dir/CheckIncludeFile.c.o  -o cmTC_51944 -rdynamic 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_3ceb7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ceb7.dir/build.make CMakeFiles/cmTC_3ceb7.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_3ceb7.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3ceb7.dir/CheckIncludeFile.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3ceb7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ceb7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3ceb7.dir/CheckIncludeFile.c.o  -o cmTC_3ceb7 -rdynamic 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command:"/usr/bin/make" "cmTC_8d309/fast"
 /usr/bin/make -f CMakeFiles/cmTC_8d309.dir/build.make CMakeFiles/cmTC_8d309.dir/build
 make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
@@ -577,6 +765,16 @@ Building C object CMakeFiles/cmTC_8d309.dir/CheckFunctionExists.c.o
 Linking C executable cmTC_8d309
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d309.dir/link.txt --verbose=1
 /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8d309.dir/CheckFunctionExists.c.o  -o cmTC_8d309 -rdynamic -lpthread 
+=======
+Run Build Command:"/usr/bin/make" "cmTC_d094a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d094a.dir/build.make CMakeFiles/cmTC_d094a.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_d094a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d094a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d094a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d094a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d094a.dir/CheckFunctionExists.c.o  -o cmTC_d094a -rdynamic -lpthread 
+>>>>>>> Gabriel
 make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
 
 
