@@ -18,10 +18,10 @@ find_package(dvb_hardware REQUIRED)
 ## catkin specific configuration ##
 ###################################
 catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES motor_controller
-  CATKIN_DEPENDS roscpp
-# DEPENDS system_lib
+#  INCLUDE_DIRS include
+#  LIBRARIES motor_controller
+#  CATKIN_DEPENDS roscpp
+#  DEPENDS system_lib
 )
 
 ###########

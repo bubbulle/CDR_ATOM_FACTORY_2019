@@ -42,14 +42,7 @@ add_library(dvb_map
     src/obstacle.cpp
 )
 
-add_executable(test src/test.cpp)
-
 target_link_libraries(dvb_map
-   ${catkin_LIBRARIES}
-)
-
-target_link_libraries(test
-   dvb_map
    ${catkin_LIBRARIES}
 )
 
