@@ -27,7 +27,6 @@ class Encoder : public Hardware
 
         int32_t getPos();
 
-<<<<<<< HEAD:cdr_robot_ws/src/dvb_hardware/include/dvb_hardware/encoder.h
     private:
         //Topics name
         std::string topic_encoder_name_;
@@ -50,14 +49,3 @@ class Encoder : public Hardware
 };
 
 #endif
-=======
-private:
-  void init();
-  void increment();
-  void decrement();
-  
-  uint8_t pinA;
-  uint8_t pinB;
-  volatile uint32_t pos; // Position (en nombre de pas) du codeur 
-};
->>>>>>> Gabriel:cdr_robot_ws/src/hardware/src/incremental_encoder/IncrementalEncoder.h
