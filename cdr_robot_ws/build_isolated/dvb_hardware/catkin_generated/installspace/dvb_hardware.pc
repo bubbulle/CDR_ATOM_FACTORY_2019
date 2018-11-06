@@ -1,0 +1,8 @@
+prefix=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install_isolated
+
+Name: dvb_hardware
+Description: Description of dvb_hardware
+Version: 0.0.0
+Cflags: -I/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install_isolated/include
+Libs: -L/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install_isolated/lib -ldvb_hardware
+Requires: geometry_msgs nav_msgs roscpp rospy std_msgs

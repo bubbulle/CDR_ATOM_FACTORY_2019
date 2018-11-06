@@ -6,9 +6,8 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
-                "/opt/ros/melodic/include",
+                "/opt/ros/kinetic/include",
                 "/usr/include",
-                "${workspaceFolder}/src/motor_encoder_controller/include",
                 "${workspaceFolder}/src/dvb_hardware/include",
                 "${workspaceFolder}/src/dvb_map/include",
                 "${workspaceFolder}/src/dvb_robot/include",

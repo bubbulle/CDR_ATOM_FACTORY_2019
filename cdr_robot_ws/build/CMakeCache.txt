@@ -14,12 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Builds the googlemock subproject
-BUILD_GMOCK:BOOL=ON
-
-//Builds the googletest subproject
-BUILD_GTEST:BOOL=OFF
-
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
@@ -55,14 +49,6 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
-
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
@@ -81,14 +67,6 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
-
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-7
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-7
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -246,10 +224,10 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
+PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
 //Specify specific Python version to use ('major.minor' or 'major')
-PYTHON_VERSION:STRING=2
+PYTHON_VERSION:STRING=
 
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build
@@ -267,7 +245,7 @@ SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 UBUNTU:BOOL=TRUE
 
 //LSB Distrib - codename tag
-UBUNTU_BIONIC:BOOL=TRUE
+UBUNTU_XENIAL:BOOL=TRUE
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -282,13 +260,13 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //The directory containing a CMake configuration file for actionlib_msgs.
-actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
+actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
 //The directory containing a CMake configuration file for catkin.
-catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
+catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
-cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
+cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 
 //Value Computed by CMake
 dvb_hardware_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/dvb_hardware
@@ -297,7 +275,7 @@ dvb_hardware_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2
 dvb_hardware_DIR:PATH=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/share/dvb_hardware/cmake
 
 //Dependencies for the target
-dvb_hardware_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+dvb_hardware_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
 dvb_hardware_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/dvb_hardware
@@ -309,7 +287,7 @@ dvb_map_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/c
 dvb_map_DIR:PATH=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/share/dvb_map/cmake
 
 //Dependencies for the target
-dvb_map_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+dvb_map_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
 dvb_map_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/dvb_map
@@ -321,7 +299,7 @@ dvb_robot_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019
 dvb_robot_DIR:PATH=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/share/dvb_robot/cmake
 
 //Dependencies for the target
-dvb_robot_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+dvb_robot_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
 dvb_robot_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/dvb_robot
@@ -333,34 +311,34 @@ encoder_controller_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FAC
 encoder_controller_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/encoder_controller
 
 //The directory containing a CMake configuration file for gencpp.
-gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
+gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 
 //The directory containing a CMake configuration file for geneus.
-geneus_DIR:PATH=/opt/ros/melodic/share/geneus/cmake
+geneus_DIR:PATH=/opt/ros/kinetic/share/geneus/cmake
 
 //The directory containing a CMake configuration file for genlisp.
-genlisp_DIR:PATH=/opt/ros/melodic/share/genlisp/cmake
+genlisp_DIR:PATH=/opt/ros/kinetic/share/genlisp/cmake
 
 //The directory containing a CMake configuration file for genmsg.
-genmsg_DIR:PATH=/opt/ros/melodic/share/genmsg/cmake
+genmsg_DIR:PATH=/opt/ros/kinetic/share/genmsg/cmake
 
 //The directory containing a CMake configuration file for gennodejs.
-gennodejs_DIR:PATH=/opt/ros/melodic/share/gennodejs/cmake
+gennodejs_DIR:PATH=/opt/ros/kinetic/share/gennodejs/cmake
 
 //The directory containing a CMake configuration file for genpy.
-genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
+genpy_DIR:PATH=/opt/ros/kinetic/share/genpy/cmake
 
 //The directory containing a CMake configuration file for geometry_msgs.
-geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
+geometry_msgs_DIR:PATH=/opt/ros/kinetic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/googlemock
+gmock_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest
 
 //Dependencies for the target
 gmock_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/usr/src/googletest/googlemock
+gmock_SOURCE_DIR:STATIC=/usr/src/gmock
 
 //Build all of Google Mock's own tests.
 gmock_build_tests:BOOL=OFF
@@ -369,19 +347,13 @@ gmock_build_tests:BOOL=OFF
 gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest
-
-//Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/usr/src/googletest
-
-//Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/googlemock/gtest
+gtest_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/gtest/gtest
 
 //Dependencies for the target
 gtest_LIB_DEPENDS:STATIC=general;-lpthread;
 
 //Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/usr/src/googletest/googletest
+gtest_SOURCE_DIR:STATIC=/usr/src/gtest
 
 //Build gtest's sample programs.
 gtest_build_samples:BOOL=OFF
@@ -396,23 +368,14 @@ gtest_disable_pthreads:BOOL=OFF
 // as static lib.
 gtest_force_shared_crt:BOOL=OFF
 
-//Build gtest with internal symbols hidden in shared libraries.
-gtest_hide_internal_symbols:BOOL=OFF
-
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
-//Value Computed by CMake
-hardware_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/hardware
-
-//Value Computed by CMake
-hardware_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/hardware
-
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_runtime.
-message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
 
 //Value Computed by CMake
 motor_controller_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/motor_controller
@@ -420,14 +383,8 @@ motor_controller_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTO
 //Value Computed by CMake
 motor_controller_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/motor_controller
 
-//Value Computed by CMake
-motor_encoder_controller_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/motor_encoder_controller
-
-//Value Computed by CMake
-motor_encoder_controller_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/motor_encoder_controller
-
 //The directory containing a CMake configuration file for nav_msgs.
-nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
+nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //Value Computed by CMake
 pid_controller_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/pid_controller
@@ -442,40 +399,34 @@ robot_path_planning_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FA
 robot_path_planning_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/robot_path_planning
 
 //The directory containing a CMake configuration file for rosconsole.
-rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
+rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 
 //The directory containing a CMake configuration file for roscpp.
-roscpp_DIR:PATH=/opt/ros/melodic/share/roscpp/cmake
+roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
 
 //The directory containing a CMake configuration file for roscpp_serialization.
-roscpp_serialization_DIR:PATH=/opt/ros/melodic/share/roscpp_serialization/cmake
+roscpp_serialization_DIR:PATH=/opt/ros/kinetic/share/roscpp_serialization/cmake
 
 //The directory containing a CMake configuration file for roscpp_traits.
-roscpp_traits_DIR:PATH=/opt/ros/melodic/share/roscpp_traits/cmake
+roscpp_traits_DIR:PATH=/opt/ros/kinetic/share/roscpp_traits/cmake
 
 //The directory containing a CMake configuration file for rosgraph_msgs.
-rosgraph_msgs_DIR:PATH=/opt/ros/melodic/share/rosgraph_msgs/cmake
+rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for rospy.
-rospy_DIR:PATH=/opt/ros/melodic/share/rospy/cmake
+rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
-rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
+rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
-sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
-
-//Value Computed by CMake
-software_BINARY_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/software
-
-//Value Computed by CMake
-software_SOURCE_DIR:STATIC=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/software
+sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
-std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
+std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
-xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
+xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 
 
 ########################
@@ -492,9 +443,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_201
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=10
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=5
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -505,10 +456,6 @@ CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
-CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
-CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -521,10 +468,6 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_AR
-CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
-CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -587,17 +530,15 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
-//Platform information initialized
-CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.10
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.5
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -629,7 +570,7 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.15()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 GMOCK_FROM_SOURCE_FOUND:INTERNAL=TRUE
