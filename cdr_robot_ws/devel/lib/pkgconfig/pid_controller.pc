@@ -1,8 +1,8 @@
-prefix=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel
+prefix=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel
 
 Name: pid_controller
 Description: Description of pid_controller
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib 
+Libs: -L/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib 
 Requires: 

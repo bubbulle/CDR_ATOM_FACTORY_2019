@@ -1,2 +1,0 @@
-dvb_hardware:dvb_map:dvb_robot:encoder_controller:motor_controller:pid_controller:robot_path_planning
--G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/florian/Documents/dvb_ws/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install_isolated
