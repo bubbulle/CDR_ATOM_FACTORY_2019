@@ -1,5 +1,6 @@
 #include "dvb_hardware/encoder.h"
 #include <wiringPi.h>
+
 Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
     Hardware(debug_mode),
     pos_(0)
@@ -38,10 +39,9 @@ Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
 	pub_encoder_ = nh_.advertise<std_msgs::Int32>(topic_encoder_name_.c_str(), 10);
 
     //WIRING PI Setup
-    /*
-    wiringPiISR(encoder->pinA, INT_EDGE_RISING, &increment)
-    pinMode(encoder->pinB, _IOS_IMPUT);
-    */
+    wiringPiISR(pinA, INT_EDGE_RISING, &increment)
+    pinMode(pinB, _IOS_IMPUT);
+
 }
 
 Encoder::~Encoder(){
