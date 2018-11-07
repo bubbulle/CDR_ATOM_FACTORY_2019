@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/dvb_map.dir/src/map.cpp.o"
   "CMakeFiles/dvb_map.dir/src/table.cpp.o"
   "CMakeFiles/dvb_map.dir/src/obstacle.cpp.o"
-  "/home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib/libdvb_map.pdb"
-  "/home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib/libdvb_map.so"
+  "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib/libdvb_map.pdb"
+  "/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel/lib/libdvb_map.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,8 @@
 #include "ros/ros.h"
 #include "std_msgs/Bool.h"
 #include <iostream>
-#include "wiringPi.h"
+
+/*#include "wiringPi.h"
 
 
 //Wiring PI 1
@@ -31,3 +32,4 @@ int main(int argc, char** argv)
 	ros::spin();
 
 }
+*/

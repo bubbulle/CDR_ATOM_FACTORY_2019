@@ -1,25 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5260c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5260c.dir/build.make CMakeFiles/cmTC_5260c.dir/build
-make[1]: Entering directory '/home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5260c.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_5260c.dir/CheckSymbolExists.c.o   -c /home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_5260c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5260c.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_5260c.dir/CheckSymbolExists.c.o  -o cmTC_5260c -rdynamic 
-CMakeFiles/cmTC_5260c.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0xe): undefined reference to `pthread_create'
-CheckSymbolExists.c:(.text+0x12): undefined reference to `pthread_create'
+Run Build Command:"/usr/bin/make" "cmTC_c620c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c620c.dir/build.make CMakeFiles/cmTC_c620c.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_c620c.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_c620c.dir/CheckSymbolExists.c.o   -c /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c620c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c620c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c620c.dir/CheckSymbolExists.c.o  -o cmTC_c620c -rdynamic 
+CMakeFiles/cmTC_c620c.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5260c.dir/build.make:97: recipe for target 'cmTC_5260c' failed
-make[1]: *** [cmTC_5260c] Error 1
-make[1]: Leaving directory '/home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5260c/fast' failed
-make: *** [cmTC_5260c/fast] Error 2
+CMakeFiles/cmTC_c620c.dir/build.make:97 : la recette pour la cible « cmTC_c620c » a échouée
+make[1]: *** [cmTC_c620c] Erreur 1
+make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_c620c/fast » a échouée
+make: *** [cmTC_c620c/fast] Erreur 2
 
-File /home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -35,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8d09f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8d09f.dir/build.make CMakeFiles/cmTC_8d09f.dir/build
-make[1]: Entering directory '/home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8d09f.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8d09f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_8d09f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d09f.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_8d09f.dir/CheckFunctionExists.c.o  -o cmTC_8d09f -rdynamic -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
+Run Build Command:"/usr/bin/make" "cmTC_aa943/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aa943.dir/build.make CMakeFiles/cmTC_aa943.dir/build
+make[1] : on entre dans le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_aa943.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_aa943.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aa943
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa943.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_aa943.dir/CheckFunctionExists.c.o  -o cmTC_aa943 -rdynamic -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8d09f.dir/build.make:97: recipe for target 'cmTC_8d09f' failed
-make[1]: *** [cmTC_8d09f] Error 1
-make[1]: Leaving directory '/home/florian/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_8d09f/fast' failed
-make: *** [cmTC_8d09f/fast] Error 2
+CMakeFiles/cmTC_aa943.dir/build.make:97 : la recette pour la cible « cmTC_aa943 » a échouée
+make[1]: *** [cmTC_aa943] Erreur 1
+make[1] : on quitte le répertoire « /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_aa943/fast » a échouée
+make: *** [cmTC_aa943/fast] Erreur 2
 
 
