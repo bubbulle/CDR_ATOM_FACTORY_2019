@@ -6,9 +6,7 @@ const float Sonar::DIST_SCALE = 58.0;
 const float Sonar::TRAVEL_TIME_MAX = MAX_DISTANCE * DIST_SCALE;
 using namespace std;*/
 
-Ultrasonic_Sensor::Ultrasonic_Sensor(std::string topic_ultrasonic_sensor_name, bool debug_mode) :
-    Hardware(debug_mode),
-    dist_(0)
+Ultrasonic_Sensor::Ultrasonic_Sensor(std::string topic_ultrasonic_sensor_name, bool debug_mode) : Hardware(debug_mode), dist_(0)
 {
     topic_ultrasonic_sensor_name_ = topic_ultrasonic_sensor_name;
 
@@ -23,12 +21,12 @@ Ultrasonic_Sensor::Ultrasonic_Sensor(std::string topic_ultrasonic_sensor_name, b
     std::string pin_echo = paramPinEcho;
 
     if (
-			      nh_.hasParam(pin_trigg) ||
-            nh_.hasParam(pin_echo) ||
-            nh_.hasParam("/ultrasonic/distance_max") ||
-            nh_.hasParam("/ultrasonic/distance_scale") ||
-            nh_.hasParam("/ultrasonic/travel_time_max") //||
-            //wiringPiSetup() < 0
+        nh_.hasParam(pin_trigg) ||
+        nh_.hasParam(pin_echo) ||
+        nh_.hasParam("/ultrasonic/distance_max") ||
+        nh_.hasParam("/ultrasonic/distance_scale") ||
+        nh_.hasParam("/ultrasonic/travel_time_max") //||
+                                                    //wiringPiSetup() < 0
     )
     {
         nh_.param<int32_t>(pin_trigg, pin_trigger_);
@@ -41,8 +39,8 @@ Ultrasonic_Sensor::Ultrasonic_Sensor(std::string topic_ultrasonic_sensor_name, b
     }
     else
     {
-		    ROS_INFO("Please check if motor PIN parameters are set in the ROS Parameter Server !\n");
-	  }
+        ROS_INFO("Please check if motor PIN parameters are set in the ROS Parameter Server !\n");
+    }
 
     /*
         Publishers
@@ -97,11 +95,13 @@ float_t Ultrasonic_Sensor::getDistance()
 
 void Ultrasonic_Sensor::spinOnce()
 {
-	  if(hardware_enable_ && hardware_startable_){
+    if (hardware_enable_ && hardware_startable_)
+    {
         getDistance();
-        ROS_INFO_COND(debug_mode_, "%s : %d", topic_ultrasonic_sensor_name_.c_str(), dist_);
-	  }
-	  else{
-		    ROS_INFO_COND(debug_mode_,"Ultrasonic sensor disabled");
-	  }
+        ROS_INFO_COND(!debug_mode_, "%s : %d", topic_ultrasonic_sensor_name_.c_str(), dist_);
+    }
+    else
+    {
+        ROS_INFO_COND(debug_mode_, "Ultrasonic sensor disabled");
+    }
 }

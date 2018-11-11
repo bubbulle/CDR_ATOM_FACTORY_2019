@@ -125,6 +125,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/encoder_controller/cmake_install.cmake")
   include("/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/motor_controller/cmake_install.cmake")
   include("/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/robot_path_planning/cmake_install.cmake")
+  include("/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/sonar_controller/cmake_install.cmake")
 
 endif()
 

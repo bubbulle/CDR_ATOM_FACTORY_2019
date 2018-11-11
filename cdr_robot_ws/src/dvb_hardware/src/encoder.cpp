@@ -1,12 +1,10 @@
 #include "dvb_hardware/encoder.h"
 //#include <wiringPi.h>
 
-Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
-    Hardware(debug_mode),
-    pos_(0)
+Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) : Hardware(debug_mode), pos_(0)
 {
     //Topic name for motor and encoder
-	topic_encoder_name_ = topic_encoder_name;
+    topic_encoder_name_ = topic_encoder_name;
 
     //Get Encoder PIN params
     char paramPinA[50];
@@ -19,9 +17,9 @@ Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
     std::string pin_b = paramPinB;
 
     if (
-			nh_.hasParam(paramPinA) ||
-            nh_.hasParam(paramPinB) //||
-            //wiringPiSetup() < 0
+        nh_.hasParam(paramPinA) ||
+        nh_.hasParam(paramPinB) //||
+                                //wiringPiSetup() < 0
     )
     {
         nh_.param<int32_t>(pin_a, pinA_);
@@ -29,23 +27,23 @@ Encoder::Encoder(std::string topic_encoder_name, bool debug_mode) :
 
         hardware_startable_ = true;
     }
-    else{
-		ROS_WARN("Please check if encoder PIN parameters are set in the ROS Parameter Server !\n");
-	}
+    else
+    {
+        ROS_WARN("Please check if encoder PIN parameters are set in the ROS Parameter Server !\n");
+    }
 
     /*
 		Publishers
 	*/
-	pub_encoder_ = nh_.advertise<std_msgs::Int32>(topic_encoder_name_.c_str(), 10);
+    pub_encoder_ = nh_.advertise<std_msgs::Int32>(topic_encoder_name_.c_str(), 10);
 
     //WIRING PI Setup
     //wiringPiISR(pinA, INT_EDGE_RISING, &increment)
     //pinMode(pinB, _IOS_IMPUT);
-
 }
 
-Encoder::~Encoder(){
-    
+Encoder::~Encoder()
+{
 }
 
 int32_t Encoder::getPos()
@@ -70,19 +68,23 @@ void Encoder::increment()
     }
     */
 
-   std_msgs::Int32 encoder_pos;
-   encoder_pos.data = pos_;
+    std_msgs::Int32 encoder_pos;
+    encoder_pos.data = pos_;
 
-   pub_encoder_.publish(encoder_pos);
+    pub_encoder_.publish(encoder_pos);
 
-   ROS_INFO_COND(debug_mode_, "%s : %d", topic_encoder_name_.c_str(), pos_);
+    ROS_INFO_COND(debug_mode_, "%s : %d", topic_encoder_name_.c_str(), pos_);
 }
 
-void Encoder::spinOnce(){
-    if(hardware_enable_ && hardware_startable_){
+void Encoder::spinOnce()
+{
+    if (hardware_enable_ && hardware_startable_)
+    {
+        ROS_INFO_COND(!debug_mode_, "Encoder not disabled");
         increment();
-	}
-	else{
-        ROS_INFO_COND(debug_mode_,"Encoder disabled");
-	}
+    }
+    else
+    {
+        ROS_INFO_COND(debug_mode_, "Encoder disabled");
+    }
 }

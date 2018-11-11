@@ -1,15 +1,19 @@
 #include <dvb_hardware/encoder.h>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
-    //Start ROS node
-    ros::init(argc, argv, "encoder_controller_node");
+  //Start ROS node
+  ros::init(argc, argv, "encoder_controller_node");
+  ros::NodeHandle n;
+  n.setParam("/frequency", 1);
+  n.setParam("/encoder/left/pinA", 2);
+  n.setParam("/encoder/left/pinB", 3);
 
-    Encoder* encoder_left = new Encoder(std::string("/encoder/left"), true);
+  Encoder *encoder_left = new Encoder(std::string("/encoder/left"), false);
+  encoder_left->setEnable(true);
+  encoder_left->spin();
 
-    encoder_left->spin();
-
-    return 0;
+  return 0;
 }
 
 /*// Start ROS node.

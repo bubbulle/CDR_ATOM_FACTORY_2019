@@ -1,2 +1,2 @@
-dvb_hardware:dvb_map:dvb_robot:encoder_controller:motor_controller:pid_controller:robot_path_planning:ros_wiring_example
+dvb_hardware:dvb_map:dvb_robot:encoder_controller:motor_controller:pid_controller:robot_path_planning:ros_wiring_example:sonar_controller
 -DCATKIN_DEVEL_PREFIX=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/install -G Unix Makefiles
