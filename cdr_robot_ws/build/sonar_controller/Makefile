@@ -89,16 +89,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : edit_cache/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -111,17 +111,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -132,6 +121,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -165,48 +165,6 @@ depend:
 	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-sonar_controller/CMakeFiles/sonar_controller.dir/rule:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sonar_controller/CMakeFiles/sonar_controller.dir/rule
-.PHONY : sonar_controller/CMakeFiles/sonar_controller.dir/rule
-
-# Convenience name for target.
-sonar_controller: sonar_controller/CMakeFiles/sonar_controller.dir/rule
-
-.PHONY : sonar_controller
-
-# fast build rule for target.
-sonar_controller/fast:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f sonar_controller/CMakeFiles/sonar_controller.dir/build.make sonar_controller/CMakeFiles/sonar_controller.dir/build
-.PHONY : sonar_controller/fast
-
-src/sonar_controller.o: src/sonar_controller.cpp.o
-
-.PHONY : src/sonar_controller.o
-
-# target to build an object file
-src/sonar_controller.cpp.o:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f sonar_controller/CMakeFiles/sonar_controller.dir/build.make sonar_controller/CMakeFiles/sonar_controller.dir/src/sonar_controller.cpp.o
-.PHONY : src/sonar_controller.cpp.o
-
-src/sonar_controller.i: src/sonar_controller.cpp.i
-
-.PHONY : src/sonar_controller.i
-
-# target to preprocess a source file
-src/sonar_controller.cpp.i:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f sonar_controller/CMakeFiles/sonar_controller.dir/build.make sonar_controller/CMakeFiles/sonar_controller.dir/src/sonar_controller.cpp.i
-.PHONY : src/sonar_controller.cpp.i
-
-src/sonar_controller.s: src/sonar_controller.cpp.s
-
-.PHONY : src/sonar_controller.s
-
-# target to generate assembly for a file
-src/sonar_controller.cpp.s:
-	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f sonar_controller/CMakeFiles/sonar_controller.dir/build.make sonar_controller/CMakeFiles/sonar_controller.dir/src/sonar_controller.cpp.s
-.PHONY : src/sonar_controller.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,14 +174,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... sonar_controller"
-	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... test"
-	@echo "... src/sonar_controller.o"
-	@echo "... src/sonar_controller.i"
-	@echo "... src/sonar_controller.s"
+	@echo "... edit_cache"
 .PHONY : help
 
 

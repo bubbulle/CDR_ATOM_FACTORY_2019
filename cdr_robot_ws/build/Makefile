@@ -815,19 +815,6 @@ a_star/fast:
 	$(MAKE) -f robot_path_planning/CMakeFiles/a_star.dir/build.make robot_path_planning/CMakeFiles/a_star.dir/build
 .PHONY : a_star/fast
 
-#=============================================================================
-# Target rules for targets named sonar_controller
-
-# Build rule for target.
-sonar_controller: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sonar_controller
-.PHONY : sonar_controller
-
-# fast build rule for target.
-sonar_controller/fast:
-	$(MAKE) -f sonar_controller/CMakeFiles/sonar_controller.dir/build.make sonar_controller/CMakeFiles/sonar_controller.dir/build
-.PHONY : sonar_controller/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -891,7 +878,6 @@ help:
 	@echo "... encoder_controller"
 	@echo "... motor_controller"
 	@echo "... a_star"
-	@echo "... sonar_controller"
 .PHONY : help
 
 

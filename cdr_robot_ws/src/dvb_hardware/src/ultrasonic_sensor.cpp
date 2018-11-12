@@ -1,5 +1,5 @@
 #include "dvb_hardware/ultrasonic_sensor.h"
-#include "wiringPi.h"
+//#include "wiringPi.h"
 
 
 
@@ -22,8 +22,8 @@ Ultrasonic_Sensor::Ultrasonic_Sensor(std::string topic_ultrasonic_sensor_name, b
         nh_.hasParam(pin_echo) ||
         nh_.hasParam("/ultrasonic/distance_max") ||
         nh_.hasParam("/ultrasonic/distance_scale") ||
-        nh_.hasParam("/ultrasonic/travel_time_max") ||
-                                                    wiringPiSetup() < 0
+        nh_.hasParam("/ultrasonic/travel_time_max") //||
+                                                   // wiringPiSetup() < 0
     )
     {
         nh_.param<int32_t>(pin_trigg, pin_trigger_);
@@ -47,7 +47,7 @@ Ultrasonic_Sensor::Ultrasonic_Sensor(std::string topic_ultrasonic_sensor_name, b
 
 float_t Ultrasonic_Sensor::getDistance()
 {
-    
+    /*
     digitalWrite(pin_trigger_, HIGH);
     delayMicroseconds(20);
     digitalWrite(pin_trigger_, LOW);
@@ -80,7 +80,7 @@ float_t Ultrasonic_Sensor::getDistance()
     // Return distance in cm
     error = false;
     dist_ = travelTime / 58.0;
-    
+    */
 
     std_msgs::Int32 ultrasonic_dist;
     ultrasonic_dist.data = dist_;

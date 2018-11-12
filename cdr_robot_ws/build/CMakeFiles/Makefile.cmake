@@ -284,5 +284,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "encoder_controller/CMakeFiles/encoder_controller.dir/DependInfo.cmake"
   "motor_controller/CMakeFiles/motor_controller.dir/DependInfo.cmake"
   "robot_path_planning/CMakeFiles/a_star.dir/DependInfo.cmake"
-  "sonar_controller/CMakeFiles/sonar_controller.dir/DependInfo.cmake"
   )
