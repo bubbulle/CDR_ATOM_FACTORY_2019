@@ -815,6 +815,19 @@ a_star/fast:
 	$(MAKE) -f robot_path_planning/CMakeFiles/a_star.dir/build.make robot_path_planning/CMakeFiles/a_star.dir/build
 .PHONY : a_star/fast
 
+#=============================================================================
+# Target rules for targets named blink
+
+# Build rule for target.
+blink: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blink
+.PHONY : blink
+
+# fast build rule for target.
+blink/fast:
+	$(MAKE) -f ros_wiring_example/CMakeFiles/blink.dir/build.make ros_wiring_example/CMakeFiles/blink.dir/build
+.PHONY : blink/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -878,6 +891,7 @@ help:
 	@echo "... encoder_controller"
 	@echo "... motor_controller"
 	@echo "... a_star"
+	@echo "... blink"
 .PHONY : help
 
 

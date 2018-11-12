@@ -417,6 +417,12 @@ robot_path_planning_BINARY_DIR:STATIC=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTO
 robot_path_planning_SOURCE_DIR:STATIC=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/robot_path_planning
 
 //Value Computed by CMake
+ros_wiring_example_BINARY_DIR:STATIC=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/ros_wiring_example
+
+//Value Computed by CMake
+ros_wiring_example_SOURCE_DIR:STATIC=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example
+
+//Value Computed by CMake
 ros_wiring_examples_BINARY_DIR:STATIC=/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build/ros_wiring_example
 
 //Value Computed by CMake

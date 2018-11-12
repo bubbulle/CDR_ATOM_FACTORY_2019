@@ -89,16 +89,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/strip/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -111,6 +111,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -121,17 +132,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -165,6 +165,48 @@ depend:
 	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+ros_wiring_example/CMakeFiles/blink.dir/rule:
+	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros_wiring_example/CMakeFiles/blink.dir/rule
+.PHONY : ros_wiring_example/CMakeFiles/blink.dir/rule
+
+# Convenience name for target.
+blink: ros_wiring_example/CMakeFiles/blink.dir/rule
+
+.PHONY : blink
+
+# fast build rule for target.
+blink/fast:
+	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f ros_wiring_example/CMakeFiles/blink.dir/build.make ros_wiring_example/CMakeFiles/blink.dir/build
+.PHONY : blink/fast
+
+src/blink.o: src/blink.cpp.o
+
+.PHONY : src/blink.o
+
+# target to build an object file
+src/blink.cpp.o:
+	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f ros_wiring_example/CMakeFiles/blink.dir/build.make ros_wiring_example/CMakeFiles/blink.dir/src/blink.cpp.o
+.PHONY : src/blink.cpp.o
+
+src/blink.i: src/blink.cpp.i
+
+.PHONY : src/blink.i
+
+# target to preprocess a source file
+src/blink.cpp.i:
+	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f ros_wiring_example/CMakeFiles/blink.dir/build.make ros_wiring_example/CMakeFiles/blink.dir/src/blink.cpp.i
+.PHONY : src/blink.cpp.i
+
+src/blink.s: src/blink.cpp.s
+
+.PHONY : src/blink.s
+
+# target to generate assembly for a file
+src/blink.cpp.s:
+	cd /home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build && $(MAKE) -f ros_wiring_example/CMakeFiles/blink.dir/build.make ros_wiring_example/CMakeFiles/blink.dir/src/blink.cpp.s
+.PHONY : src/blink.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,10 +216,14 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... blink"
+	@echo "... test"
+	@echo "... src/blink.o"
+	@echo "... src/blink.i"
+	@echo "... src/blink.s"
 .PHONY : help
 
 
