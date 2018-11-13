@@ -1,4 +1,5 @@
 #include "dvb_hardware/motor.h"
+#include <wiringPi.h>
 
 Motor::Motor(std::string topic_motor_name, bool debug_mode) :
     Hardware(debug_mode)
@@ -8,25 +9,33 @@ Motor::Motor(std::string topic_motor_name, bool debug_mode) :
     //Get motor PIN params
     char paramPinPWM[50];
     char paramPinDirection[50];
+    char paramPinDirection2[50];
 
     sprintf(paramPinPWM, "%s/pinPWM", topic_motor_name_.c_str());
     sprintf(paramPinDirection, "%s/pinDirection", topic_motor_name_.c_str());
+    sprintf(paramPinDirection2, "%s/pinDirection2", topic_motor_name_.c_str());
 
     std::string pin_pwm = paramPinPWM;
     std::string pin_dir = paramPinDirection;
-
+    std::string pin_dir2 = paramPinDirection2;
+    wiringPiSetup ();
     if (
-			nh_.hasParam(pin_pwm) ||
-            nh_.hasParam(pin_dir) ||
+			nh_.hasParam(pin_pwm)  ||
+            nh_.hasParam(pin_dir)  ||
+            nh_.hasParam(pin_dir2) ||
             nh_.hasParam("/motor/outputmin") ||
-            nh_.hasParam("/motor/outputmax") //||
-            //wiringPiSetup() < 0
+            nh_.hasParam("/motor/outputmax") ||
+            wiringPiSetup() < 0
     )
     {
         nh_.param<int32_t>(pin_pwm, pinPWM_);
         nh_.param<int32_t>(pin_dir, pinDirection);
+        nh_.param<int32_t>(pin_dir2, pinDirection2);
         nh_.param<float_t>("/motor/outputmin", output_min_);
         nh_.param<float_t>("/motor/outputmax", output_max_);
+        pinMode(pinPWM_,OUTPUT);      //ENA
+        pinMode(pinDirection,OUTPUT); //IN1
+        pinMode(pinDirection2,OUTPUT);//IN2
 
         hardware_startable_ = true;
     }
@@ -50,7 +59,16 @@ void Motor::spinOnce(){
 
 void Motor::control_motor(int32_t pwm, bool trigo_dir)
 {
-    //Set PWM
+    analogWrite(pinPWM_, pwm); //speed 0 - 255 
+    if (trigo_dir == false) {
+    digitalWrite(pinDirection, LOW);
+    digitalWrite(pinDirection2, HIGH);
+    }
+    else {
+    digitalWrite(pinDirection, HIGH);
+    digitalWrite(pinDirection2,LOW);   
+    }
+   
 }
 
 void Motor::control_callback(const std_msgs::Int32::ConstPtr& control_msg)

@@ -15,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(dvb_hardware REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system)
 
-##set(wiringPi_include "/usr/local/include")
+set(wiringPi_include "/usr/local/include")
 
 
 catkin_package(
@@ -33,16 +33,16 @@ include_directories(
  include
   ${catkin_INCLUDE_DIRS}
   ${dvb_hardware_INCLUDE_DIRS}
-##  ${wiringPi_include}
+  ${wiringPi_include}
 )
 
-##LINK_DIRECTORIES("/usr/local/lib")
+LINK_DIRECTORIES("/usr/local/lib")
 
 
-add_executable(blink src/blink.cpp)
+add_executable(blink_led  src/blink.cpp)
 
-target_link_libraries(blink
-   dvb_hardware
-   ## wiringPi
+target_link_libraries(blink_led
+  ## dvb_hardware
+   wiringPi
    ${catkin_LIBRARIES}
 )

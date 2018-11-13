@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/blink.cpp
+/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/blink.cpp
 ros/ros.h
-/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/ros/ros.h
+/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/ros/ros.h
 std_msgs/Bool.h
-/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/std_msgs/Bool.h
+/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/std_msgs/Bool.h
 iostream
 -
+wiringPi.h
+/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/wiringPi.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -691,4 +693,6 @@ vector
 -
 time.h
 -
+
+/usr/local/include/wiringPi.h
 

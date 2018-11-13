@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build"
+export PWD="/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/build"

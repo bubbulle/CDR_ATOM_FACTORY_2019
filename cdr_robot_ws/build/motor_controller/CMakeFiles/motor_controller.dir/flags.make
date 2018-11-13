@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"motor_controller\"
 
-CXX_INCLUDES = -I/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/motor_controller/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/gab/Bureau/DaVinciBot/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/dvb_hardware/include 
+CXX_INCLUDES = -I/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/motor_controller/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/dvb_hardware/include 
 

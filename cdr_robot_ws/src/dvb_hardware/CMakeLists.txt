@@ -48,7 +48,7 @@ add_library(dvb_hardware
 )
 
 target_link_libraries(dvb_hardware
-   ${catkin_LIBRARIES}
+   ${catkin_LIBRARIES} wiringPi
 )
 
 ##target_link_libraries(sonar_controller
