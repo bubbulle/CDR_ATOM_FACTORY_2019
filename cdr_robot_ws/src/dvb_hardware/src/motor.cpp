@@ -32,11 +32,11 @@ Motor::Motor(std::string topic_motor_name, bool debug_mode) :
         nh_.param<int32_t>(pin_dir2, pinDirection2);
         nh_.param<float_t>("/motor/outputmin", output_min_);
         nh_.param<float_t>("/motor/outputmax", output_max_);
-        pinMode(1,PWM_OUTPUT);   //ENA
+        pinMode(pinPWM_,PWM_OUTPUT);   //ENA
       
- 	 pinMode(4,OUTPUT); //IN1
-        pinMode(5,OUTPUT);//IN2
-	pinMode(7,OUTPUT);
+ 	 pinMode(pinDirection,OUTPUT); //IN1
+     pinMode(pinDirection2,OUTPUT);//IN2
+	
         hardware_startable_ = true;
     }
     else{
@@ -57,27 +57,19 @@ void Motor::spinOnce(){
     
 }
 
-void Motor::control_motor(int32_t pwm, bool trigo_dir)
+void Motor::control_motor(Int32 pwm, bool trigo_dir)
 {
    ROS_INFO("Start");   
-    pwmWrite(1, 200); //speed 0 - 255 
-pwmWrite(1,255);
+   pwmWrite(pinPWM_, pwm); //speed 0 - 255 
   
-
-pwmWrite(1,HIGH);  
-
-pwmWrite(1,HIGH);
  if (trigo_dir == false) {
-    digitalWrite(4, LOW);
-   digitalWrite(5, HIGH);
+     digitalWrite(pinDirection, LOW);
+     digitalWrite(pinDirection2, HIGH);
     }
     else {
-    digitalWrite(7,HIGH);
-
-digitalWrite(pinDirection, HIGH);
+    digitalWrite(pinDirection, HIGH);
     digitalWrite(pinDirection2,LOW);   
     }
-   
 }
 
 void Motor::control_callback(const std_msgs::Int32::ConstPtr& control_msg)

@@ -18,14 +18,14 @@ class Motor : public Hardware
         void control_callback(const std_msgs::Int32::ConstPtr& control_msg);
 
         //Set motor speed
-        void control_motor(int32_t pwm, bool trigo_dir);
+        void control_motor(Int32 pwm, bool trigo_dir);
 
         //PIN Number
-        int32_t pinPWM_;
-        int32_t pinDirection;
-	int32_t pinDirection2; 
+        int32 pinPWM_;
+        int32 pinDirection;
+	    int32 pinDirection2; 
         //Control stuffs
-        int32_t pwm_;
+        int32 pwm_;
         bool trigo_dir_;
 
         //Motor parameters
