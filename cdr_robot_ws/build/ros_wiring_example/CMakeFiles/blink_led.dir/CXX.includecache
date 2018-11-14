@@ -9,10 +9,12 @@
 /home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/blink.cpp
 ros/ros.h
 /home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/ros/ros.h
-std_msgs/Bool.h
-/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/std_msgs/Bool.h
+std_msgs/Int32.h
+/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/std_msgs/Int32.h
 iostream
 -
+std_msgs/Bool.h
+/home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/std_msgs/Bool.h
 wiringPi.h
 /home/florian/Test_wiringpi/CDR_ATOM_FACTORY_2019/cdr_robot_ws/src/ros_wiring_example/src/wiringPi.h
 
@@ -663,6 +665,22 @@ ros/forwards.h
 /opt/ros/kinetic/include/rosconsole/macros_generated.h
 
 /opt/ros/kinetic/include/std_msgs/Bool.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/opt/ros/kinetic/include/std_msgs/Int32.h
 string
 -
 vector

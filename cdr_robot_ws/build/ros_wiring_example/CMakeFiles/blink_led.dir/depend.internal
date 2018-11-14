@@ -60,6 +60,7 @@ ros_wiring_example/CMakeFiles/blink_led.dir/src/blink.cpp.o
  /opt/ros/kinetic/include/ros/wall_timer_options.h
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
  /opt/ros/kinetic/include/std_msgs/Bool.h
+ /opt/ros/kinetic/include/std_msgs/Int32.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
  /usr/local/include/wiringPi.h
